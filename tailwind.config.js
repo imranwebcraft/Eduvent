@@ -10,6 +10,10 @@ export default {
 			colors: {
 				primary: "#4D2C5E",
 				secondary: "#FF7426 ",
+				background: "#FDF8EE",
+				"text-one": "#1D1D1D",
+				hover: "#563168",
+				shadow: "#553267",
 			},
 		},
 	},

@@ -7,7 +7,7 @@ const Banner = () => {
 			<div className=" absolute -top-[2%] left-[0%]">
 				<img src={bannerbg} alt="" />
 			</div>
-			<div className=" absolute bottom-[0%] right-[0%]">
+			<div className=" absolute bottom-[20%] right-[0%]">
 				<img src={bannerbg} alt="" />
 			</div>
 			<div className=" absolute left-[44%] top-[35%]">

@@ -1,14 +1,21 @@
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import {
+	GithubAuthProvider,
+	GoogleAuthProvider,
 	createUserWithEmailAndPassword,
 	onAuthStateChanged,
 	signInWithEmailAndPassword,
+	signInWithPopup,
 } from "firebase/auth";
 import auth from "../Config/firebase.config";
 
-// Create contect
+// ******Create contect******
 export const AuthContext = createContext();
+
+// Auth Provider
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
 	// User state
@@ -22,6 +29,16 @@ const AuthProvider = ({ children }) => {
 	// Sign in user
 	const siginIn = (email, password) => {
 		return signInWithEmailAndPassword(auth, email, password);
+	};
+
+	// GoogleSignIn
+	const googleSignIn = () => {
+		return signInWithPopup(auth, googleProvider);
+	};
+
+	// Github sign in
+	const gitHubSignIn = () => {
+		return signInWithPopup(auth, githubProvider);
 	};
 
 	//  Set user observer
@@ -41,6 +58,8 @@ const AuthProvider = ({ children }) => {
 		user,
 		createUser,
 		siginIn,
+		googleSignIn,
+		gitHubSignIn,
 	};
 	// Set provider and get the full app as children
 	return (

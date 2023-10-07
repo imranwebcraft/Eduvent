@@ -14,7 +14,7 @@ const Login = () => {
 	const [showPassword, setShowPassword] = useState(false);
 
 	// Use state data
-	const { siginIn } = useContext(AuthContext);
+	const { siginIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
 
 	// Login handle
 	const handleLogin = e => {
@@ -42,8 +42,31 @@ const Login = () => {
 			});
 	};
 
+	// Handle Google Sign in
+	const handlGoogleSignIn = () => {
+		googleSignIn()
+			.then(response => {
+				console.log(response.user);
+				toast.success("Google log in successful😍");
+			})
+			.catch(() => {
+				toast.error("Something went wrong😥");
+			});
+	};
+
+	// Handle GitHub Sign in
+	const handlGitHubSignIn = () => {
+		gitHubSignIn()
+			.then(response => {
+				console.log(response.user);
+				toast.success("Google log in successful😍");
+			})
+			.catch(() => {
+				toast.error("Something went wrong😥");
+			});
+	};
 	return (
-		<div className=" container mx-auto h-[80vh] mt-5">
+		<div className=" container mx-auto  min-h-screen mt-10">
 			<div className=" h-full flex justify-between items-center">
 				{/* Form */}
 				<div className=" w-3/5">
@@ -133,7 +156,10 @@ const Login = () => {
 
 							<div className=" grid  gap-2 mt-5">
 								{/* Google */}
-								<button className=" bg-gray-100 hover:bg-gray-200  duration-300 ease-in-out cursor-pointer rounded-md px-2 py-2 flex items-center justify-center gap-2">
+								<button
+									onClick={handlGoogleSignIn}
+									className=" bg-gray-100 hover:bg-gray-200  duration-300 ease-in-out cursor-pointer rounded-md px-2 py-2 flex items-center justify-center gap-2"
+								>
 									<img
 										className="w-[20px] h-[20px]"
 										src={google}
@@ -146,7 +172,10 @@ const Login = () => {
 							</div>
 							<div className=" grid  gap-2 mt-5">
 								{/* Github */}
-								<button className=" bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out cursor-pointer rounded-md px-2 py-2 flex items-center justify-center gap-2">
+								<button
+									onClick={handlGitHubSignIn}
+									className=" bg-gray-100 hover:bg-gray-200 duration-300 ease-in-out cursor-pointer rounded-md px-2 py-2 flex items-center justify-center gap-2"
+								>
 									<img
 										className="w-[25px] h-[25px]"
 										src={github}

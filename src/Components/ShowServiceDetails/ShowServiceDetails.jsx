@@ -5,13 +5,20 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineDescription } from "react-icons/md";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import moment from "moment/moment";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import { BsTags } from "react-icons/bs";
+import { useEffect } from "react";
 
 const ShowServiceDetails = ({ service }) => {
-	const { name, image, details, price, rating, short_description, tags } =
-		service || {};
+	// Destructure
+	const { name, image, details, short_description, tags } = service || {};
+
+	// Prevent auto scroll at the bottom
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0); // Scroll to the top of the page on route change
+	}, [location.pathname]);
 
 	return (
 		<div className="mb-20">
@@ -49,7 +56,7 @@ const ShowServiceDetails = ({ service }) => {
 							<p className=" text-gray-600">
 								{moment().format("dddd, MMMM Do YYYY")}
 							</p>
-							<p className="text-sm text-violet-500">Add to calendar</p>
+							<p className="text-sm text-violet-500 my-1">Add to calendar</p>
 							<button className="block w-full rounded mb-2 bg-violet-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-violet-600 duration-300 ease-linear">
 								Book now
 							</button>
@@ -63,7 +70,7 @@ const ShowServiceDetails = ({ service }) => {
 					</div>
 
 					<div>
-						<div className="flex gap-2 items-center text-xl font-medium mb-5">
+						<div className="flex gap-2 items-center text-xl font-medium mb-3">
 							<p>Organizer Contact</p>
 							<MdOutlineAlternateEmail className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>

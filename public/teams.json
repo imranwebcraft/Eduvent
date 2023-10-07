@@ -4,41 +4,47 @@
 		"name": "Alex",
 		"role": "Event Coordinator",
 		"image": "https://i.ibb.co/bFJq8d2/albert-dera-ILip77-Sbm-OE-unsplash.jpg",
-		"description": "Oversees the entire event planning process, manages the team, and ensures that all tasks are completed on time."
+		"description": "Oversees the entire event planning process, manages the team, and ensures that all tasks are completed on time.",
+		"blog_img": "https://i.ibb.co/jr1rTpw/ian-schneider-Tam-Mbr4okv4-unsplash.jpg"
 	},
 	{
 		"id": 2,
 		"name": "Taylorn",
 		"role": "Program Manager",
 		"image": "https://i.ibb.co/SrFV3RY/brooke-cagle-w-KOKid-NT14w-unsplash.jpg",
-		"description": "Plans and schedules the event program, including workshops, seminars, and keynote sessions."
+		"description": "Plans and schedules the event program, including workshops, seminars, and keynote sessions.",
+		"blog_img": "https://i.ibb.co/k0hhbDy/ben-white-4-K2l-IP0zc-k-unsplash.jpg"
 	},
 	{
 		"id": 3,
 		"name": "Cameron",
 		"role": "Technical Support",
 		"image": "https://i.ibb.co/p0wZ6tm/caleb-george-Ae-Zncpkq-MVU-unsplash.jpg",
-		"description": "Handles audiovisual equipment, live streaming, and technical aspects of the event."
+		"description": "Handles audiovisual equipment, live streaming, and technical aspects of the event.",
+		"blog_img": "https://i.ibb.co/TMWbMKQ/corinne-kutz-t-MI2-r5-Nfo-unsplash.jpg"
 	},
 	{
 		"id": 4,
 		"name": "Rowan",
 		"role": "Volunteer Coordinator",
 		"image": "https://i.ibb.co/1qrDBmK/christian-buehner-DIt-Ylc26z-VI-unsplash.jpg",
-		"description": "Recruits and manages event volunteers, assigning tasks and schedules."
+		"description": "Recruits and manages event volunteers, assigning tasks and schedules.",
+		"blog_img": "https://i.ibb.co/74TrBSW/bruce-mars-FWVMh-Ua-wb-Y-unsplash.jpg"
 	},
 	{
 		"id": 5,
 		"name": "Kennedy",
 		"role": "Photographer/Videographer",
 		"image": "https://i.ibb.co/HX439sn/contactus.jpg",
-		"description": "Captures photos and videos of the event for documentation and promotion."
+		"description": "Captures photos and videos of the event for documentation and promotion.",
+		"blog_img": "https://i.ibb.co/rF7sYTN/alex-lvrs-2z-Dw14y-CYqk-unsplash.jpg"
 	},
 	{
 		"id": 6,
 		"name": "Phoenix",
 		"role": "Post-Event Evaluation",
 		"image": "https://i.ibb.co/jzV7nTb/jonas-kakaroto-KIPqvv-TOC1s-unsplash.jpg",
-		"description": "Reviews the event's success, analyzes data, and prepares a post-event report."
+		"description": "Reviews the event's success, analyzes data, and prepares a post-event report.",
+		"blog_img": "https://i.ibb.co/LhrswZ2/firmbee-com-gcs-NOs-PEXfs-unsplash.jpg"
 	}
 ]

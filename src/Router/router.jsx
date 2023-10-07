@@ -6,6 +6,9 @@ import Login from "../Pages/Login";
 import ErrorPage from "../Pages/ErrorPage";
 import ServiceDetails from "../Pages/ServiceDetails";
 import PrivateRoute from "../Private/PrivateRoute";
+import Contact from "../Pages/Contact";
+import Team from "../Pages/Team";
+import Blog from "../Pages/Blog";
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +21,28 @@ const router = createBrowserRouter([
 				element: <Home></Home>,
 				loader: () => fetch("/services.json"),
 			},
+			{
+				path: "/contact",
+				element: <Contact></Contact>,
+			},
+
+			{
+				path: "/team",
+				element: (
+					<PrivateRoute>
+						<Team></Team>
+					</PrivateRoute>
+				),
+			},
+			{
+				path: "/blog",
+				element: (
+					<PrivateRoute>
+						<Blog></Blog>
+					</PrivateRoute>
+				),
+			},
+
 			{
 				path: "/register",
 				element: <Register></Register>,

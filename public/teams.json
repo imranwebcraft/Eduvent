@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"name": "Alex",
+		"role": "Event Coordinator",
+		"image": "https://i.ibb.co/bFJq8d2/albert-dera-ILip77-Sbm-OE-unsplash.jpg",
+		"description": "Oversees the entire event planning process, manages the team, and ensures that all tasks are completed on time."
+	},
+	{
+		"id": 2,
+		"name": "Taylorn",
+		"role": "Program Manager",
+		"image": "https://i.ibb.co/SrFV3RY/brooke-cagle-w-KOKid-NT14w-unsplash.jpg",
+		"description": "Plans and schedules the event program, including workshops, seminars, and keynote sessions."
+	},
+	{
+		"id": 3,
+		"name": "Cameron",
+		"role": "Technical Support",
+		"image": "https://i.ibb.co/p0wZ6tm/caleb-george-Ae-Zncpkq-MVU-unsplash.jpg",
+		"description": "Handles audiovisual equipment, live streaming, and technical aspects of the event."
+	},
+	{
+		"id": 4,
+		"name": "Rowan",
+		"role": "Volunteer Coordinator",
+		"image": "https://i.ibb.co/1qrDBmK/christian-buehner-DIt-Ylc26z-VI-unsplash.jpg",
+		"description": "Recruits and manages event volunteers, assigning tasks and schedules."
+	},
+	{
+		"id": 5,
+		"name": "Kennedy",
+		"role": "Photographer/Videographer",
+		"image": "https://i.ibb.co/HX439sn/contactus.jpg",
+		"description": "Captures photos and videos of the event for documentation and promotion."
+	},
+	{
+		"id": 6,
+		"name": "Phoenix",
+		"role": "Post-Event Evaluation",
+		"image": "https://i.ibb.co/jzV7nTb/jonas-kakaroto-KIPqvv-TOC1s-unsplash.jpg",
+		"description": "Reviews the event's success, analyzes data, and prepares a post-event report."
+	}
+]

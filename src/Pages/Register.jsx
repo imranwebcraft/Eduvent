@@ -4,10 +4,45 @@ import signUpImg from "../assets/Images/register3.webp";
 import { PiEyeDuotone } from "react-icons/pi";
 import { PiEyeSlashDuotone } from "react-icons/pi";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
+	// Declare state to manage show and hide password visibility
 	const [showPassword, setShowPassword] = useState(false);
+
+	// use context
+	const { createUser } = useContext(AuthContext);
+
+	// Form submit handler
+	const handleRegistration = e => {
+		e.preventDefault();
+
+		//Get form
+		const form = new FormData(e.currentTarget);
+
+		// Get form data
+		const name = form.get("name");
+		const email = form.get("email");
+		const password = form.get("password");
+		const photo = form.get("files");
+		console.log(name, email, password, photo);
+
+		// Create user with email and password
+
+		createUser(email, password)
+			.then(response => {
+				console.log(response.user);
+				toast.success("User registration successful😍");
+
+				// Clear input field
+				e.target.reset();
+			})
+			.catch(() => {
+				toast.error("Something went wrong😥");
+			});
+	};
 
 	return (
 		<div className=" container mx-auto h-[80vh] mt-5">
@@ -20,7 +55,7 @@ const Register = () => {
 								<img src={logo} alt="" />
 							</span>
 							<h1 className=" text-3xl font-bold mb-2">Create Your Accout</h1>
-							<p className=" text-gray-600 font-medium">
+							<p className=" text-text-one font-medium">
 								Already register?
 								<Link to={"/login"}>
 									<span className=" text-violet-500 font-medium ml-1 hover:underline">
@@ -30,11 +65,11 @@ const Register = () => {
 							</p>
 						</div>
 
-						<form className="w-full">
+						<form onSubmit={handleRegistration} className="w-full">
 							<div className=" mt-5">
-								<label className="block font-semibold">Name</label>
+								<label className="block font-medium">Name</label>
 								<input
-									className="w-full text-gray-900 font-medium  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500  placeholder:text-sm placeholder:opacity-80"
+									className="w-full text-gray-900  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500  placeholder:text-sm placeholder:opacity-80"
 									type="text"
 									name="name"
 									placeholder="Enter your name"
@@ -42,9 +77,9 @@ const Register = () => {
 								/>
 							</div>
 							<div className=" mt-5">
-								<label className="block font-semibold">Email</label>
+								<label className="block fontme">Email</label>
 								<input
-									className="w-full text-gray-900 font-medium border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
+									className="w-full text-gray-900  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									type="email"
 									name="email"
 									placeholder="example@gmail.com"
@@ -53,10 +88,10 @@ const Register = () => {
 							</div>
 							<div className="relative mt-5">
 								<div className=" flex items-center justify-between">
-									<label className="block font-semibold">Password</label>
+									<label className="block fontme">Password</label>
 								</div>
 								<input
-									className="w-full text-gray-900 font-medium border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
+									className="w-full text-gray-900 border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									type={showPassword ? "text" : "password"}
 									name="password"
 									placeholder="Enter your Password"
@@ -74,9 +109,9 @@ const Register = () => {
 								</div>
 							</div>
 							<div className=" mt-5">
-								<label className="block font-semibold">Attachment</label>
+								<label className="block fontme">Attachment</label>
 								<input
-									className="w-full text-gray-900 font-medium border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
+									className="w-full text-gray-900  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									name="files"
 									placeholder="Enter image URL"
 									// required

@@ -4,7 +4,10 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineDescription } from "react-icons/md";
 import { MdOutlineAlternateEmail } from "react-icons/md";
-// import moment from "moment";
+import moment from "moment/moment";
+import { Link } from "react-router-dom";
+import { AiOutlineShareAlt } from "react-icons/ai";
+import { BsTags } from "react-icons/bs";
 
 const ShowServiceDetails = ({ service }) => {
 	const { name, image, details, price, rating, short_description, tags } =
@@ -13,14 +16,10 @@ const ShowServiceDetails = ({ service }) => {
 	return (
 		<div className="mb-20">
 			<div className="relative">
-				<img
-					className=" w-full h-[60vh] object-cover "
-					src={image}
-					alt={name}
-				/>
+				<img className=" w-full h-[60vh] object-cover" src={image} alt={name} />
 				<div className="absolute inset-0 bg-gradient-to-b from-gray-400 via-gray-700 to-gray-800 opacity-60"></div>
 				<h1
-					className=" flex justify-center items-center absolute top-[50%] left-[25%] right-[25%]
+					className=" flex justify-center items-center absolute top-[40%] left-[25%] right-[25%]
 				
 				text-white text-6xl font-bold
 				
@@ -36,7 +35,7 @@ const ShowServiceDetails = ({ service }) => {
 					<div>
 						<div className="flex gap-2 items-center text-xl font-medium mb-5">
 							<p>Details</p>
-							<MdOutlineDescription />
+							<MdOutlineDescription className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 						<div className=" text-justify leading-relaxed mb-5">{details}</div>
 					</div>
@@ -44,10 +43,12 @@ const ShowServiceDetails = ({ service }) => {
 					<div className="text-xl font-medium mb-5">
 						<div className="flex gap-2 items-center mb-5">
 							<p>Date & time</p>
-							<BsCalendarDate />
+							<BsCalendarDate className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 						<div className="border border-violet-300 rounded-md p-8 w-[40%]">
-							<p className=" text-gray-600">Saturdat, March 18 2023, 9.30PM</p>
+							<p className=" text-gray-600">
+								{moment().format("dddd, MMMM Do YYYY")}
+							</p>
 							<p className="text-sm text-violet-500">Add to calendar</p>
 							<button className="block w-full rounded mb-2 bg-violet-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-violet-600 duration-300 ease-linear">
 								Book now
@@ -64,22 +65,34 @@ const ShowServiceDetails = ({ service }) => {
 					<div>
 						<div className="flex gap-2 items-center text-xl font-medium mb-5">
 							<p>Organizer Contact</p>
-							<MdOutlineAlternateEmail />
+							<MdOutlineAlternateEmail className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 						<p>
 							Please go to{" "}
 							<span className=" text-violet-500 hover:underline hover:cursor-pointer">
-								www.edu-dev.com
+								www.edu-vent.com
 							</span>{" "}
 							and refer the FAQ section for more detail.
 						</p>
 					</div>
+
+					<Link
+						to={"/"}
+						className=" mt-5 group relative inline-block overflow-hidden border border-violet-600 px-8 py-2 focus:outline-none focus:ring focus:ring-violet-200"
+						href="/download"
+					>
+						<span className="absolute inset-y-0 right-0 w-[2px] bg-violet-600 transition-all group-hover:w-full group-active:bg-violet-500"></span>
+
+						<span className="relative text-sm font-medium text-violet-500 transition-colors group-hover:text-white">
+							Go Back
+						</span>
+					</Link>
 				</div>
 				<div className="">
 					<div>
 						<div className="flex gap-2 items-center text-xl font-medium mb-5">
 							<p>Choose Location</p>
-							<MdOutlineLocationOn />
+							<MdOutlineLocationOn className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 
 						<img
@@ -93,7 +106,11 @@ const ShowServiceDetails = ({ service }) => {
 						<p className=" text-sm text-gray-600">{short_description}</p>
 					</div>
 					<div className=" mt-5 ">
-						<p className=" text-lg font-medium"> Tags</p>
+						<div className=" flex gap-2 items-center text-xl font-medium">
+							<p className=" text-lg font-medium"> Tags</p>
+							<BsTags className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
+						</div>
+
 						<ul className=" space-y-2">
 							{tags?.map((tag, index) => (
 								<li
@@ -105,9 +122,10 @@ const ShowServiceDetails = ({ service }) => {
 							))}
 						</ul>
 					</div>
-					<div className=" mt-5">
-						<div className="flex gap-2 items-center text-xl font-medium mb-5">
+					<div className="mt-5">
+						<div className="flex gap-2 items-center text-xl font-medium mb-2">
 							<p>Share with colleague</p>
+							<AiOutlineShareAlt className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 						<div className=" flex items-center gap-5">
 							<div className=" cursor-pointer">

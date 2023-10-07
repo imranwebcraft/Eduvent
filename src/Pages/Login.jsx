@@ -5,10 +5,42 @@ import google from "../assets/SVG/Google.svg";
 import github from "../assets/SVG/github.svg";
 import { PiEyeDuotone } from "react-icons/pi";
 import { PiEyeSlashDuotone } from "react-icons/pi";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+	// Declare state to manage show and hide password visibility
 	const [showPassword, setShowPassword] = useState(false);
+
+	// Use state data
+	const { siginIn } = useContext(AuthContext);
+
+	// Login handle
+	const handleLogin = e => {
+		e.preventDefault();
+
+		// Get form
+		const form = new FormData(e.currentTarget);
+
+		// Get data from field
+		const email = form.get("email");
+		const password = form.get("password");
+		console.log(email, password);
+
+		// Handle sign in
+
+		siginIn(email, password)
+			.then(response => {
+				console.log(response.user);
+				toast.success("Log in successful😍");
+				// Clear input field
+				e.target.reset();
+			})
+			.catch(() => {
+				toast.error("Something went wrong😥");
+			});
+	};
 
 	return (
 		<div className=" container mx-auto h-[80vh] mt-5">
@@ -20,7 +52,9 @@ const Login = () => {
 							<span className="flex justify-center">
 								<img src={logo} alt="" />
 							</span>
-							<h1 className=" text-3xl font-bold mb-2">Welcome Back</h1>
+							<h1 className=" text-text-one text-3xl font-bold mb-2">
+								Welcome Back
+							</h1>
 							<p className=" text-gray-600 font-medium">
 								Don&apos;t have an account?
 								<Link to={"/register"}>
@@ -31,11 +65,11 @@ const Login = () => {
 							</p>
 						</div>
 
-						<form className="w-full">
+						<form onSubmit={handleLogin} className="w-full">
 							<div className=" mt-5">
-								<label className="block font-semibold">Email</label>
+								<label className="block font-medium">Email</label>
 								<input
-									className="w-full text-gray-900 font-medium  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
+									className="w-full text-gray-900   border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									type="email"
 									name="email"
 									placeholder="example@gmail.com"
@@ -44,10 +78,10 @@ const Login = () => {
 							</div>
 							<div className="relative mt-5">
 								<div className=" flex items-center justify-between">
-									<label className="block font-semibold">Password</label>
+									<label className="block font-medium">Password</label>
 								</div>
 								<input
-									className="w-full text-gray-900 font-medium border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
+									className="w-full text-gray-900  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									type={showPassword ? "text" : "password"}
 									name="password"
 									placeholder="Enter your Password"
@@ -126,7 +160,7 @@ const Login = () => {
 
 							{/* Copyright */}
 							<div className=" flex justify-center mt-10">
-								<p>Copyright &copy; Fun House.com</p>
+								<p>Copyright &copy;Edu-Vent.com</p>
 							</div>
 						</form>
 					</div>

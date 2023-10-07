@@ -32,8 +32,26 @@ const Register = () => {
 		const photo = form.get("files");
 		console.log(name, email, password, photo);
 
+		//Validation
+		if (password?.length < 6) {
+			return toast.error("Password must be at least 6 charecter or longer🙈");
+		} else if (!/^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{6,}$/.test(password)) {
+			return toast.error(
+				"Password must have an Uppercase letter and a Special character",
+				{
+					style: {
+						border: "1px solid #7C3AED",
+						padding: "10px",
+						color: "red",
+					},
+					iconTheme: {
+						primary: "red",
+						secondary: "#FFFAEE",
+					},
+				}
+			);
+		}
 		// Create user with email and password
-
 		createUser(email, password)
 			.then(response => {
 				console.log(response.user);
@@ -141,7 +159,7 @@ const Register = () => {
 									className="w-full text-gray-900  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									name="files"
 									placeholder="Enter image URL"
-									// required
+									required
 								/>
 							</div>
 
@@ -171,14 +189,14 @@ const Register = () => {
 								/>
 							</div>
 
-							<div className=" grid grid-cols-3 items-center mt-8">
+							<div className=" grid grid-cols-3 items-center mt-5">
 								<hr />
 								<p className=" text-center">Or Continue With</p>
 								<hr />
 							</div>
 							{/* Social Login */}
 
-							<div className=" grid  gap-2 mt-5">
+							<div className=" grid gap-2 grid-cols-2 mt-2">
 								{/* Google */}
 								<button
 									onClick={handlGoogleSignIn}
@@ -193,8 +211,7 @@ const Register = () => {
 										Google
 									</span>
 								</button>
-							</div>
-							<div className=" grid  gap-2 mt-5">
+
 								{/* Github */}
 								<button
 									onClick={handlGitHubSignIn}
@@ -211,7 +228,7 @@ const Register = () => {
 								</button>
 							</div>
 
-							<div className=" flex justify-center mt-10">
+							<div className=" flex justify-center mt-5">
 								<p>Copyright &copy; Edu-Vent.com</p>{" "}
 							</div>
 						</form>

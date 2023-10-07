@@ -26,10 +26,15 @@ const Login = () => {
 		// Get data from field
 		const email = form.get("email");
 		const password = form.get("password");
-		console.log(email, password);
+		const checkBox = e.target.checkbox.checked;
+		console.log(email, password, checkBox);
+
+		// Validate
+		if (!checkBox) {
+			return toast.error("Please accept Term & Privacy Policy");
+		}
 
 		// Handle sign in
-
 		siginIn(email, password)
 			.then(response => {
 				console.log(response.user);
@@ -37,8 +42,8 @@ const Login = () => {
 				// Clear input field
 				e.target.reset();
 			})
-			.catch(() => {
-				toast.error("Something went wrong😥");
+			.catch(error => {
+				toast.error("Something went wrong😥" + error.message);
 			});
 	};
 
@@ -147,14 +152,14 @@ const Login = () => {
 								/>
 							</div>
 
-							<div className=" grid grid-cols-3 items-center mt-8">
+							<div className=" grid grid-cols-3 items-center mt-5">
 								<hr />
 								<p className=" text-center">Or Continue With</p>
 								<hr />
 							</div>
 							{/* Social Login */}
 
-							<div className=" grid  gap-2 mt-5">
+							<div className=" grid gap-2 grid-cols-2 mt-2">
 								{/* Google */}
 								<button
 									onClick={handlGoogleSignIn}
@@ -169,8 +174,7 @@ const Login = () => {
 										Google
 									</span>
 								</button>
-							</div>
-							<div className=" grid  gap-2 mt-5">
+
 								{/* Github */}
 								<button
 									onClick={handlGitHubSignIn}
@@ -186,9 +190,8 @@ const Login = () => {
 									</span>
 								</button>
 							</div>
-
 							{/* Copyright */}
-							<div className=" flex justify-center mt-10">
+							<div className=" flex justify-center mt-5">
 								<p>Copyright &copy;Edu-Vent.com</p>
 							</div>
 						</form>

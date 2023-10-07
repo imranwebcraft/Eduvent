@@ -5,8 +5,17 @@ import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
 	// Get context user to take decision may i give permisiion or not
-	const { user } = useContext(AuthContext);
-	console.log(user);
+	const { user, loading } = useContext(AuthContext);
+
+	if (loading) {
+		return (
+			<div className="flex h-screen items-center justify-center space-x-2">
+				<div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-400"></div>
+				<div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-400"></div>
+				<div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-400"></div>
+			</div>
+		);
+	}
 
 	if (user) {
 		return children;

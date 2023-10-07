@@ -7,7 +7,7 @@ const Banner = () => {
 			<div className=" absolute -top-[2%] left-[0%]">
 				<img src={bannerbg} alt="" />
 			</div>
-			<div className=" absolute bottom-[20%] right-[0%]">
+			<div className=" absolute bottom-[10%] right-[0%]">
 				<img src={bannerbg} alt="" />
 			</div>
 			<div className=" absolute left-[44%] top-[35%]">
@@ -69,7 +69,7 @@ const Banner = () => {
 							</svg>
 						</span>
 
-						<span className=" font-medium transition-all group-hover:me-4">
+						<span className="text-sm font-medium transition-all group-hover:me-4">
 							Hire Us Now
 						</span>
 					</button>

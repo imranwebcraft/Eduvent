@@ -5,7 +5,16 @@
 		"image": "https://i.ibb.co/SRzXY6g/fran-innocenti-I-Lx-DFIIRIA-unsplash.jpg",
 		"details": "Academic conferences are organized gatherings of scholars, researchers, educators, and experts from various fields and disciplines. These events serve as platforms for sharing, discussing, and disseminating the latest research findings, knowledge, and insights. They offer opportunities for networking, interdisciplinary exchange, professional development, and the presentation of original research papers and studies. Keynote speakers, panel discussions, workshops, and poster sessions are common features of academic conferences. These events contribute to the advancement of knowledge and scholarly discourse across diverse academic disciplines.Academic conferences play a crucial role in fostering intellectual growth and collaboration within the academic community. They facilitate the exchange of ideas and methodologies, encouraging innovation and the exploration of emerging trends and topics. Participants at these conferences often engage in lively discussions, leading to valuable contributions to their respective fields.",
 		"price": 10000,
-		"rating": 4.5
+		"rating": 4.5,
+		"tags": [
+			"Research Presentations",
+			"Keynote Speakers",
+			"Workshops",
+			"Networking",
+			"Paper Submissions",
+			"Poster Sessions"
+		],
+		"short_description": "Gather scholars and experts to share research findings and promote interdisciplinary exchange."
 	},
 	{
 		"id": 2,
@@ -13,7 +22,16 @@
 		"image": "https://i.ibb.co/ZgwgzGB/product-school-Gajr-OEN6m4-unsplash.jpg",
 		"details": "Academic conferences are organized gatherings of scholars, researchers, educators, and experts from various fields and disciplines. These events serve as platforms for sharing, discussing, and disseminating the latest research findings, knowledge, and insights. They offer opportunities for networking, interdisciplinary exchange, professional development, and the presentation of original research papers and studies. Keynote speakers, panel discussions, workshops, and poster sessions are common features of academic conferences. These events contribute to the advancement of knowledge and scholarly discourse across diverse academic disciplines.Academic conferences play a crucial role in fostering intellectual growth and collaboration within the academic community.Academic conferences provide a platform for scholars, researchers, and professionals to come together and discuss the latest advancements, trends, and discoveries in their respective fields. These events are often organized around specific themes or topics, bringing like-minded individuals together to share their knowledge and insights. Workshops and training sessions are commonly held during conferences, offering attendees the opportunity to enhance their skills and expertise. In addition to workshops and training sessions, academic conferences often feature a diverse range of activities and events. These may include keynote presentations from renowned experts, panel discussions on pressing issues in the field, and networking opportunities that allow attendees to connect with peers, mentors, and potential collaborators. Poster sessions and paper presentations offer scholars a chance to showcase their research findings and receive feedback from their peers. Overall, academic conferences serve as a hub for the exchange of ideas, knowledge sharing, and professional growth within a specific academic or research community.",
 		"price": 12000,
-		"rating": 4.3
+		"rating": 4.3,
+		"tags": [
+			"Hands-on Learning",
+			"Skill Development",
+			"Industry Experts",
+			"Certification",
+			"Practical Training",
+			"Interactive Sessions"
+		],
+		"short_description": "Hands-on learning, skill development, and practical training sessions."
 	},
 	{
 		"id": 3,
@@ -21,7 +39,16 @@
 		"image": "https://i.ibb.co/GnCy1vj/jason-goodman-Oalh2-Moj-Uuk-unsplash.jpg",
 		"details": "Career fairs are events designed to connect job seekers with potential employers and opportunities. These fairs provide a platform for individuals looking to advance their careers or explore new employment options. Employers, ranging from local businesses to multinational corporations, often set up booths or virtual spaces at career fairs to showcase their company and job openings. Job seekers can visit these booths, engage with company representatives, and submit their resumes. Career fairs may focus on specific industries or be more general in scope, allowing attendees to explore a wide range of career paths. In addition to job opportunities, career fairs may offer workshops, seminars, and networking sessions to help attendees enhance their job-seeking skills and connect with professionals in their desired fields. Overall, career fairs serve as valuable resources for both job seekers and employers, fostering connections that can lead to fulfilling careers and business growth.Career fairs, also known as job fairs or employment expos, are events where job seekers meet prospective employers. Organizations set up booths or online profiles to showcase job opportunities. Attendees explore careers, learn about job requirements, and attend workshops. Career fairs foster networking, providing connections with recruiters and professionals. Virtual career fairs offer accessibility. They play a vital role in job hunting, career exploration, and skill development",
 		"price": 14000,
-		"rating": 4.7
+		"rating": 4.7,
+		"tags": [
+			"Job Opportunities",
+			"Networking",
+			"Company Booths",
+			"Resume Review",
+			"Interview Preparation",
+			"Career Guidance"
+		],
+		"short_description": "Connect job seekers with opportunities, networking, and career guidance."
 	},
 	{
 		"id": 4,
@@ -29,7 +56,16 @@
 		"image": "https://i.ibb.co/3pYJXnK/kenny-eliason-z-FSo6bn-ZJTw-unsplash.jpg",
 		"details": "Student competitions encompass a wide range of disciplines, including science, technology, engineering, mathematics (STEM), arts, business, and more. These competitions encourage students to develop critical thinking, problem-solving, teamwork, and leadership skills. Student competitions often have specific objectives, such as learning and skill development, innovation and creativity, networking, recognition and awards, and career advancement. These events are not only a source of personal and academic growth but also contribute to a student's holistic development. Whether students are pursuing their passions, aiming for scholarships, or simply seeking new challenges, student competitions provide a platform for growth, recognition, and the pursuit of excellence.",
 		"price": 10000,
-		"rating": 4.4
+		"rating": 4.4,
+		"tags": [
+			"Team Challenges",
+			"Problem Solving",
+			"Innovation",
+			"Prizes and Awards",
+			"Skill Showcases",
+			"Judging Panels"
+		],
+		"short_description": "Showcase innovation and problem-solving skills in team challenges."
 	},
 	{
 		"id": 5,
@@ -37,7 +73,16 @@
 		"image": "https://i.ibb.co/BfnHXxR/jason-goodman-w-Vh5gr-SMYa-Y-unsplash.jpg",
 		"details": "Parent-Teacher Meetings, often abbreviated as PTMs, are essential gatherings held at educational institutions to facilitate communication and collaboration between parents or guardians and teachers. These meetings serve as a platform for discussing a student's academic progress, behavior, and overall development. During PTMs, parents and teachers can exchange valuable insights, set academic goals, and address any concerns or challenges faced by the student. PTMs typically involve one-on-one or group discussions, where teachers provide feedback on a student's performance, strengths, and areas that may need improvement. Parents, on the other hand, can share their observations and discuss strategies for supporting their child's educational journey. These meetings promote a collaborative environment that enhances a student's educational experience and ensures that parents and teachers work together to create a conducive learning environment. Overall, Parent-Teacher Meetings foster a sense of partnership between home and school, reinforcing the importance of parental involvement in a child's education. They play a crucial role in helping students thrive academically and socially while promoting open and constructive communication between all stakeholders in a student's educational journey.",
 		"price": 20000,
-		"rating": 4.7
+		"rating": 4.7,
+		"tags": [
+			"Teacher Interactions",
+			"Progress Reports",
+			"Parental Involvement",
+			"Student Performance",
+			"Education Plans",
+			"Feedback"
+		],
+		"short_description": "Facilitate teacher-parent interactions and discuss student performance."
 	},
 	{
 		"id": 6,
@@ -45,6 +90,15 @@
 		"image": "https://i.ibb.co/h23tMKC/md-duran-r-E9vg-D-TXg-M-unsplash.jpg",
 		"details": "Educational Seminars are structured events designed to provide knowledge, insights, and learning opportunities to participants on specific educational topics or subjects. These seminars aim to promote learning and skill development among attendees, making them valuable tools for both personal and professional growth. Typically, educational seminars feature one or more subject matter experts or experienced speakers who deliver presentations, lectures, or workshops on the chosen topic. These speakers are often professionals, scholars, or practitioners in their respective fields, ensuring the quality and relevance of the content. Key characteristics of educational seminars include: 1. Focused Topics: Seminars are usually centered around specific subjects, allowing participants to delve deep into the subject matter and gain specialized knowledge. 2. Interactive Learning: Seminars often encourage interaction between speakers and participants. This can include Q&A sessions, group discussions, case studies, and hands-on activities. 3. Skill Enhancement: Seminars frequently offer opportunities for skill development, whether it's learning a new technique, mastering a particular software tool, or improving problem-solving abilities. 4. Networking: Educational seminars provide an environment for participants to connect with like-minded individuals, experts, and peers who share similar interests or professional goals. 5. Timely and Relevant: The topics covered in seminars are typically current and relevant to the participants' needs, making the information practical and applicable. 6. Varied Formats: Seminars can take various formats, such as workshops, webinars, conferences, and symposiums, depending on the goals and audience size. 7. Certificates and Credits: Some educational seminars offer certificates or continuing education credits, which can be valuable for professional development and career advancement.",
 		"price": 15500,
-		"rating": 4.4
+		"rating": 4.4,
+		"tags": [
+			"Expert Speakers",
+			"Knowledge Sharing",
+			"Discussion Panels",
+			"Special Topics",
+			"Q&A Sessions",
+			"Learning Resources"
+		],
+		"short_description": "Engage in knowledge sharing through expert speakers and discussion panels."
 	}
 ]

@@ -7,7 +7,8 @@ const Footer = () => {
 				<div className=" px-4 pb-8 pt-16 sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-md">
 						<strong className="block text-center text-xl font-bold text-text-one sm:text-3xl">
-							Want us to email you with the latest blockbuster news?
+							Subscribe To Our{" "}
+							<span className=" text-violet-500">Newsleater</span>
 						</strong>
 
 						<form className="mt-6">

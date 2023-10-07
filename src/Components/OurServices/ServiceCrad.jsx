@@ -6,9 +6,10 @@ import Rating from "react-rating";
 
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const ServiceCrad = ({ service }) => {
-	const { name, image, details, price, rating } = service || {};
+	const { id, name, image, details, price, rating } = service || {};
 
 	return (
 		<div className=" block  rounded-lg p-4 border border-violet-200 shadow-sm hover:shadow-md hover:cursor-pointer hover:scale-105 duration-300 ease-in-out transition-all shadow-violet-100">
@@ -45,7 +46,8 @@ const ServiceCrad = ({ service }) => {
 			</div>
 
 			<div>
-				<button
+				<Link
+					to={`/service/${id}`}
 					className="group relative inline-block overflow-hidden border border-violet-600 px-8 py-2 focus:outline-none focus:ring"
 					href="/download"
 				>
@@ -54,7 +56,7 @@ const ServiceCrad = ({ service }) => {
 					<span className="relative text-sm font-medium text-violet-600 transition-colors group-hover:text-white">
 						Details
 					</span>
-				</button>
+				</Link>
 			</div>
 		</div>
 	);

@@ -3,7 +3,7 @@ import logo from "../../assets/SVG/Logo.svg";
 const Footer = () => {
 	return (
 		<div>
-			<footer className="bg-white transition-all duration-300 ease-in-out">
+			<footer className=" bg-white transition-all duration-300 ease-in-out">
 				<div className=" px-4 pb-8 pt-16 sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-md">
 						<strong className="block text-center text-xl font-bold text-text-one sm:text-3xl">
@@ -280,7 +280,7 @@ const Footer = () => {
 
 					<div className="mt-16 border-t border-gray-100 pt-8">
 						<p className="text-center text-xs/relaxed text-gray-500">
-							© Company 2022. All rights reserved.
+							© Edu-Vent 2023. All rights reserved.
 							<br />
 							Created with
 							<a

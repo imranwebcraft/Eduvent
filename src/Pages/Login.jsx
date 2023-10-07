@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginSVG from "../assets/Images/login2.webp";
 import logo from "../assets/SVG/Logo.svg";
 import google from "../assets/SVG/Google.svg";
@@ -15,6 +15,11 @@ const Login = () => {
 
 	// Use state data
 	const { siginIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
+
+	// Get user targeted page address
+	const location = useLocation();
+	// Use navigate hook to navigate the user after login
+	const navigate = useNavigate();
 
 	// Login handle
 	const handleLogin = e => {
@@ -41,6 +46,8 @@ const Login = () => {
 				toast.success("Log in successful😍");
 				// Clear input field
 				e.target.reset();
+				//Navigate the user
+				navigate(location.state ? location.state : "/");
 			})
 			.catch(error => {
 				toast.error("Something went wrong😥" + error.message);
@@ -53,6 +60,8 @@ const Login = () => {
 			.then(response => {
 				console.log(response.user);
 				toast.success("Google log in successful😍");
+				//Navigate the user
+				navigate(location.state ? location.state : "/");
 			})
 			.catch(() => {
 				toast.error("Something went wrong😥");
@@ -65,11 +74,14 @@ const Login = () => {
 			.then(response => {
 				console.log(response.user);
 				toast.success("GitHub log in successful😍");
+				//Navigate the user
+				navigate(location.state ? location.state : "/");
 			})
 			.catch(() => {
 				toast.error("Something went wrong😥");
 			});
 	};
+
 	return (
 		<div className=" container mx-auto  min-h-screen mt-10">
 			<div className=" h-full flex justify-between items-center">
@@ -191,8 +203,10 @@ const Login = () => {
 								</button>
 							</div>
 							{/* Copyright */}
-							<div className=" flex justify-center mt-5">
-								<p>Copyright &copy;Edu-Vent.com</p>
+							<div className=" flex  justify-center mt-5">
+								<p className=" text-sm text-gray-600">
+									Copyright &copy;Edu-Vent.com
+								</p>
 							</div>
 						</form>
 					</div>

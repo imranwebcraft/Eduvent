@@ -10,7 +10,7 @@ const Banner = () => {
 			<div className=" absolute bottom-[10%] right-[0%]">
 				<img src={bannerbg} alt="" />
 			</div>
-			<div className=" absolute left-[44%] top-[35%]">
+			{/* <div className=" absolute left-[40%] top-[32%]">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="143"
@@ -35,7 +35,7 @@ const Banner = () => {
 						</clipPath>
 					</defs>
 				</svg>
-			</div>
+			</div> */}
 			<div className="container mx-auto flex items-center h-[90vh]">
 				<div>
 					<h1 className=" z-50 text-7xl font-extrabold leading-[90px] mb-2">

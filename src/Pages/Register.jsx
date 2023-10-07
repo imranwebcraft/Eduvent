@@ -3,7 +3,7 @@ import logo from "../assets/SVG/Logo.svg";
 import signUpImg from "../assets/Images/register3.webp";
 import { PiEyeDuotone } from "react-icons/pi";
 import { PiEyeSlashDuotone } from "react-icons/pi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
@@ -16,7 +16,11 @@ const Register = () => {
 	const [showPassword, setShowPassword] = useState(false);
 
 	// Use state data
-	const { createUser, googleSignIn, gitHubSignIn } = useContext(AuthContext);
+	const { createUser, googleSignIn, gitHubSignIn, updateUserProfile } =
+		useContext(AuthContext);
+
+	//Use navigate hook to redirect the user after register an account
+	const navigate = useNavigate();
 
 	// Form submit handler
 	const handleRegistration = e => {
@@ -59,6 +63,16 @@ const Register = () => {
 
 				// Clear input field
 				e.target.reset();
+				// Redirect to the homepage
+				navigate("/");
+				// Update profile
+				updateUserProfile(name, photo)
+					.then(() => {
+						toast.success("Profile update successful😍");
+					})
+					.catch(() => {
+						toast.error("Something went wrong😥");
+					});
 			})
 			.catch(() => {
 				toast.error("Something went wrong😥");
@@ -71,6 +85,8 @@ const Register = () => {
 			.then(response => {
 				console.log(response.user);
 				toast.success("Google log in successful😍");
+				// Redirect to the homepage
+				navigate("/");
 			})
 			.catch(() => {
 				toast.error("Something went wrong😥");
@@ -83,6 +99,7 @@ const Register = () => {
 			.then(response => {
 				console.log(response.user);
 				toast.success("GitHub log in successful😍");
+				navigate("/");
 			})
 			.catch(() => {
 				toast.error("Something went wrong😥");
@@ -229,7 +246,9 @@ const Register = () => {
 							</div>
 
 							<div className=" flex justify-center mt-5">
-								<p>Copyright &copy; Edu-Vent.com</p>{" "}
+								<p className=" text-sm text-gray-600">
+									Copyright &copy; Edu-Vent.com
+								</p>{" "}
 							</div>
 						</form>
 					</div>

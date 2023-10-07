@@ -24,6 +24,7 @@ const ShowServiceDetails = ({ service }) => {
 		<div className="mb-20">
 			<div className="relative">
 				<img className=" w-full h-[60vh] object-cover" src={image} alt={name} />
+
 				<div className="absolute inset-0 bg-gradient-to-b from-gray-400 via-gray-700 to-gray-800 opacity-60"></div>
 				<h1
 					className=" flex justify-center items-center absolute top-[40%] left-[25%] right-[25%]

@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/SVG/Logo.svg";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -69,7 +69,6 @@ const Navbar = () => {
 
 				{user ? (
 					<>
-						{" "}
 						<div className=" flex items-center gap-2">
 							<div>{user.displayName}</div>
 							<div className="relative flex-shrink-0">
@@ -77,7 +76,7 @@ const Navbar = () => {
 								<img
 									src={user.photoURL}
 									alt=""
-									className="w-10 h-10 border rounded-full dark:bg-gray-500 dark:border-gray-700"
+									className="w-10 h-10 border-2 rounded-full border-violet-500 "
 								/>
 							</div>
 							<div
@@ -85,13 +84,13 @@ const Navbar = () => {
 										hover:shadow-violet-200
 									"
 							>
-								<button
+								<Link
+									to={"/login"}
 									onClick={handleLogOut}
 									className=" text-sm font-medium "
-									to={"/register"}
 								>
 									Sign Out
-								</button>
+								</Link>
 							</div>
 						</div>
 					</>
@@ -102,7 +101,7 @@ const Navbar = () => {
 										hover:shadow-violet-200
 									"
 						>
-							<Link className=" text-sm font-medium " to={"/login"}>
+							<Link className=" text-sm font-medium " to={"/register"}>
 								Sign Up
 							</Link>
 						</div>

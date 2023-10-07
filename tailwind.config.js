@@ -6,6 +6,7 @@ export default {
 			fontFamily: {
 				inter: "'Inter', sans-serif",
 				caladea: "'Caladea', serif",
+				roboto: "'Roboto', sans-serif",
 			},
 			colors: {
 				primary: "#4D2C5E",

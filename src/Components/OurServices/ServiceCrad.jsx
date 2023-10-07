@@ -11,7 +11,7 @@ const ServiceCrad = ({ service }) => {
 	const { name, image, details, price, rating } = service || {};
 
 	return (
-		<div className="block place-items-center rounded-lg p-4 border border-violet-200 shadow-sm hover:shadow-md hover:cursor-pointer hover:scale-105 duration-300 ease-in-out transition-all shadow-violet-100">
+		<div className=" block  rounded-lg p-4 border border-violet-200 shadow-sm hover:shadow-md hover:cursor-pointer hover:scale-105 duration-300 ease-in-out transition-all shadow-violet-100">
 			<img className=" w-full h-[150px] object-cover" alt="Home" src={image} />
 
 			<div className="my-2">
@@ -29,7 +29,7 @@ const ServiceCrad = ({ service }) => {
 				<p className=" text-lg font-medium">
 					Price: <span className=" text-base">{price} TK</span>
 				</p>
-				<p>
+				<p className=" flex items-center">
 					<Rating
 						initialRating={rating}
 						readonly
@@ -40,7 +40,7 @@ const ServiceCrad = ({ service }) => {
 							<BsStarFill className="text-violet-600 mr-1"></BsStarFill>
 						}
 					/>
-					<span className=" text-lg">{rating}</span>
+					<span className=" text-base">{rating}</span>
 				</p>
 			</div>
 

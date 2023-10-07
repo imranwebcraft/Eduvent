@@ -59,7 +59,7 @@ const Login = () => {
 		gitHubSignIn()
 			.then(response => {
 				console.log(response.user);
-				toast.success("Google log in successful😍");
+				toast.success("GitHub log in successful😍");
 			})
 			.catch(() => {
 				toast.error("Something went wrong😥");

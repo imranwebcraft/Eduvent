@@ -93,10 +93,10 @@ const Login = () => {
 			<Helmet>
 				<title>Eduvent - Login</title>
 			</Helmet>
-			<div className=" h-full flex justify-between items-center">
+			<div className=" h-full flex flex-col lg:flex-row justify-between items-center">
 				{/* Form */}
-				<div className=" w-3/5">
-					<div className=" w-1/2 mx-auto h-full flex flex-col gap-10 items-center justify-center">
+				<div className=" w-full lg:w-3/5">
+					<div className=" w-full lg:w-1/2 mx-auto h-full flex flex-col gap-10 items-center justify-center">
 						<div className=" text-center">
 							<span className="flex justify-center">
 								<img src={logo} alt="" />
@@ -221,7 +221,7 @@ const Login = () => {
 					</div>
 				</div>
 				{/* Image */}
-				<div className="w-2/5">
+				<div className=" hidden lg:block w-2/5">
 					<div className=" w-full h-full flex justify-center items-center">
 						<img src={loginSVG} alt="" />
 					</div>

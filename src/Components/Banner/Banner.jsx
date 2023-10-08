@@ -4,38 +4,12 @@ import bannerbg from "../../assets/SVG/bannerbg.svg";
 const Banner = () => {
 	return (
 		<div className=" relative ">
-			<div className=" absolute -top-[2%] left-[0%]">
+			<div className=" absolute -top-[3%] left-[0%]">
 				<img src={bannerbg} alt="" />
 			</div>
 			<div className=" absolute bottom-[10%] right-[0%]">
 				<img src={bannerbg} alt="" />
 			</div>
-			{/* <div className=" absolute left-[40%] top-[32%]">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="143"
-					height="115"
-					viewBox="0 0 143 115"
-					fill="none"
-				>
-					<g clipPath="url(#clip0_1_150)">
-						<path
-							d="M25.7647 88.3521C32.0648 92.3399 37.9038 96.0264 44.4048 100.136C40.5964 103.485 36.9973 102.932 34.1298 101.707C24.7568 97.6813 15.2613 93.6794 6.44462 88.6045C-0.386884 84.6795 0.717564 79.4402 8.21716 76.1655C14.4661 73.4404 20.7933 70.8602 26.8901 67.8225C29.866 66.3428 32.3076 63.8396 35.1497 62.0745C36.4622 61.2654 38.1609 61.0854 39.6759 60.634C39.9617 62.5183 41.1147 64.9238 40.3552 66.1699C38.9217 68.5252 36.4157 70.2607 34.2882 72.1754C33.1725 73.1877 31.892 74.0147 29.0842 76.1523C32.7918 75.9584 34.8351 76.3169 36.5261 75.687C46.8537 71.8835 57.5404 68.7276 67.2689 63.7466C89.1582 52.554 109.436 39.0092 124.23 18.7073C125 17.652 125.842 16.469 126.929 15.9114C127.952 15.3771 129.646 15.1017 130.504 15.6093C131.353 16.1034 132.143 17.9433 131.872 18.8587C131.041 21.578 130.184 24.552 128.431 26.6686C123.419 32.7123 118.398 38.8605 112.594 44.1143C93.5335 61.4459 71.9088 74.7547 47.4911 83.1467C40.8664 85.4336 33.7875 86.4646 25.7647 88.3521Z"
-							fill="#D6CAF4"
-						/>
-					</g>
-					<defs>
-						<clipPath id="clip0_1_150">
-							<rect
-								width="145.113"
-								height="40.5595"
-								fill="white"
-								transform="translate(142.91 33.5903) rotate(145.912)"
-							/>
-						</clipPath>
-					</defs>
-				</svg>
-			</div> */}
 			<div className="container mx-auto flex items-center h-[90vh]">
 				<div>
 					<h1 className=" z-50 text-7xl font-extrabold leading-[90px] mb-2">
@@ -92,7 +66,7 @@ const Banner = () => {
 									fill="#F1BF5A"
 								/>
 							</svg>
-							<p className=" text-gray-600">Academic Conferences</p>
+							<p className=" text-gray-400">Academic Conferences</p>
 						</div>
 						<div className=" flex items-center gap-2">
 							<svg
@@ -114,7 +88,7 @@ const Banner = () => {
 									</clipPath>
 								</defs>
 							</svg>
-							<p className=" text-gray-600">Workshops and Training</p>
+							<p className=" text-gray-400">Workshops and Training</p>
 						</div>
 						{/* <div className=" flex items-center gap-2">
 							<svg
@@ -144,7 +118,7 @@ const Banner = () => {
 									fill="#B4708D"
 								/>
 							</svg>
-							<p className=" text-gray-600">Student Competitions</p>
+							<p className=" text-gray-400">Student Competitions</p>
 						</div>
 					</div>
 				</div>

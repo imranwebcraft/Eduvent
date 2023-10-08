@@ -29,7 +29,7 @@ console.log(greetign);
 
 ```javascript
 function sum(a, b) {
-  return a + b;
+	return a + b;
 }
 
 sum(1, "2");
@@ -80,7 +80,7 @@ console.log(food);
 
 ```javascript
 function sayHi(name) {
-  return `Hi there, ${name}`;
+	return `Hi there, ${name}`;
 }
 
 console.log(sayHi());
@@ -107,8 +107,8 @@ console.log(sayHi());
 let count = 0;
 const nums = [0, 1, 2, 3];
 
-nums.forEach((num) => {
-  if (num) count += 1;
+nums.forEach(num => {
+	if (num) count += 1;
 });
 
 console.log(count);

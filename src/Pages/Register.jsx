@@ -247,7 +247,7 @@ const Register = () => {
 
 							<div className=" flex justify-center mt-5">
 								<p className=" text-sm text-gray-600">
-									Copyright &copy; Edu-Vent.com
+									Copyright &copy; Eduvent.com
 								</p>{" "}
 							</div>
 						</form>

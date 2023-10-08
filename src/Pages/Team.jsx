@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TeamCard from "../Components/TeamCard.jsx/TeamCard";
+import Footer from "../Components/Footer/Footer";
 
 const Team = () => {
 	// State for team members
@@ -29,6 +30,8 @@ const Team = () => {
 					))}
 				</div>
 			</div>
+			{/* Footer */}
+			<Footer></Footer>
 		</div>
 	);
 };

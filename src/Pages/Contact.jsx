@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer/Footer";
 import contactImage from "../assets/Images/contactus.jpg";
 
 const Contact = () => {
@@ -213,6 +214,9 @@ const Contact = () => {
 					</div>
 				</div>
 			</section>
+
+			{/* Footer */}
+			<Footer></Footer>
 		</div>
 	);
 };

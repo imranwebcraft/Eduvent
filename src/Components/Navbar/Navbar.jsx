@@ -62,7 +62,7 @@ const Navbar = () => {
 				<div className=" flex gap-2 items-center">
 					<img className=" w-[50px] h-[40px]" src={logo} alt="" />
 					<Link className="  duration-200 text-2xl font-bold" to={"/"}>
-						Edu-Vent
+						Eduvent
 					</Link>
 				</div>
 				<div className="space-y-1">
@@ -90,6 +90,7 @@ const Navbar = () => {
 						/>
 					</div>
 				</div>
+
 				<ul className="flex gap-11 items-center font-semibold">{links}</ul>
 
 				{user ? (

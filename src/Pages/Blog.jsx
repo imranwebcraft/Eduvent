@@ -1,4 +1,5 @@
 import BlogCard from "../Components/BlogCard/BlogCard";
+import Footer from "../Components/Footer/Footer";
 import useBlogs from "../Hook/blogs";
 
 const Blog = () => {
@@ -24,6 +25,7 @@ const Blog = () => {
 					))}
 				</div>
 			</div>
+			<Footer></Footer>
 		</div>
 	);
 };

@@ -183,7 +183,7 @@ const Profile = () => {
 						<textarea
 							rows="3"
 							placeholder="Message..."
-							className="p-4 rounded-md resize-none border-gray-300 text-gray-800 focus:border-violet-500 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-40"
+							className="p-4 rounded-md  border-gray-300 text-gray-800 focus:border-violet-500 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-40"
 						></textarea>
 						<button
 							type="button"

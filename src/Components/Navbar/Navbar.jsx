@@ -108,7 +108,9 @@ const Navbar = () => {
 					</div>
 				</div>
 
-				<ul className="flex gap-11 items-center font-medium mt-2">{links}</ul>
+				<ul className="flex flex-wrap gap-5 lg:gap-11 items-center font-medium mt-2">
+					{links}
+				</ul>
 
 				{user ? (
 					<>

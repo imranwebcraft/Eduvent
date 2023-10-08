@@ -1,54 +1,71 @@
 import bannerImg from "../../assets/SVG/banner.svg";
 import bannerbg from "../../assets/SVG/bannerbg.svg";
-
 const Banner = () => {
 	return (
 		<div className=" relative ">
-			<div className=" absolute -top-[3%] left-[0%]">
+			<div
+				className=" absolute -top-[3%] left-[0%]"
+				data-aos="zoom-in-up"
+				data-aos-duration="2000"
+				data-aos-easing="ease-in-sine"
+			>
 				<img src={bannerbg} alt="" />
 			</div>
-			<div className=" absolute bottom-[10%] right-[0%]">
+			<div
+				className=" absolute bottom-[10%] right-[0%]"
+				data-aos="zoom-in-up"
+				data-aos-duration="2000"
+				data-aos-easing="ease-in-shine"
+			>
 				<img src={bannerbg} alt="" />
 			</div>
 			<div className="container mx-auto flex items-center h-[90vh]">
 				<div>
-					<h1 className=" z-50 text-7xl font-extrabold leading-[90px] mb-2">
-						The <span className=" text-violet-500">Smart</span> <br /> Choice
-						For <span className=" text-violet-500">Future</span>
-					</h1>
-					<p className=" z-50 leading-7 mb-5">
-						Elearn is a global training provider based across the UK that
-						specialises in accredited and bespoke training courses. We crush
-						the...
-					</p>
-
-					<button
-						className="group relative inline-flex items-center overflow-hidden ring-4 ring-violet-200 rounded bg-violet-500  hover:bg-violet-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-violet-600 duration-300 ease-in-out transition-all"
-						href="/download"
+					<div
+						data-aos="fade-up"
+						data-aos-duration="2000"
+						data-aos-easing="ease-in-shine"
 					>
-						<span className="absolute -end-full transition-all group-hover:end-4">
-							<svg
-								className="h-5 w-5 rtl:rotate-180"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth="2"
-									d="M17 8l4 4m0 0l-4 4m4-4H3"
-								/>
-							</svg>
-						</span>
+						<h1 className=" z-50 text-7xl font-extrabold leading-[90px] mb-2">
+							The <span className=" text-violet-500">Smart</span> <br /> Choice
+							For <span className=" text-violet-500">Future</span>
+						</h1>
+						<p className=" z-50 leading-7 mb-5">
+							Elearn is a global training provider based across the UK that
+							specialises in accredited and bespoke training courses. We crush
+							the...
+						</p>
+						<button
+							className="group relative inline-flex items-center overflow-hidden ring-4 ring-violet-200 rounded bg-violet-500  hover:bg-violet-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-violet-600 duration-300 ease-in-out transition-all"
+							href="/download"
+						>
+							<span className="absolute -end-full transition-all group-hover:end-4">
+								<svg
+									className="h-5 w-5 rtl:rotate-180"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
+										d="M17 8l4 4m0 0l-4 4m4-4H3"
+									/>
+								</svg>
+							</span>
+							<span className="text-sm font-medium transition-all group-hover:me-4">
+								Hire Us Now
+							</span>
+						</button>
+					</div>
 
-						<span className="text-sm font-medium transition-all group-hover:me-4">
-							Hire Us Now
-						</span>
-					</button>
-
-					<div className=" flex items-center gap-10 mt-5">
+					<div
+						className=" flex items-center gap-10 mt-5"
+						data-aos="fade-up"
+						data-aos-duration="3000"
+					>
 						<div className=" flex items-center gap-2">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -90,21 +107,7 @@ const Banner = () => {
 							</svg>
 							<p className=" text-gray-400">Workshops and Training</p>
 						</div>
-						{/* <div className=" flex items-center gap-2">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="35"
-								height="36"
-								viewBox="0 0 50 36"
-								fill="none"
-							>
-								<path
-									d="M24.8686 0.853668C20.5626 0.853668 17.072 4.92908 17.072 9.95636C17.072 13.4429 18.751 16.471 21.2165 18L18.3574 19.325L10.7491 22.8537C10.0141 23.2212 9.64729 23.8444 9.64729 24.7265V33.1057C9.70775 34.1533 10.3363 35.1297 11.3555 35.1463H38.423C39.5865 35.0451 40.175 34.1079 40.1865 33.1057V24.7265C40.1865 23.8444 39.8197 23.2212 39.0847 22.8537L31.7519 19.325L28.7045 17.8813C31.0688 16.3179 32.6653 13.3553 32.6653 9.9564C32.6653 4.92908 29.1746 0.853668 24.8686 0.853668ZM12.2926 4.05466C10.4396 4.12504 8.971 4.92687 7.85525 6.20449C6.62108 7.74274 6.01942 9.56907 6.00779 11.3859C6.08358 14.0725 7.28567 16.6158 9.42567 17.9461L0.881792 21.9165C0.29375 22.137 0 22.6515 0 23.46V30.1849C0.0459167 31.0768 0.509 31.8264 1.37729 31.8392H7.05579V24.7265C7.14975 22.8248 8.04275 21.2878 9.64729 20.5377L15.3243 17.837C15.7653 17.5797 16.188 17.23 16.5923 16.789C14.2516 13.1775 13.9266 8.85186 15.4351 5.04729C14.454 4.44683 13.3513 4.06095 12.2926 4.05466ZM37.6504 4.05466C36.4386 4.08004 35.3187 4.52629 34.3988 5.15649C35.8661 8.99553 35.4614 13.3238 33.2953 16.6781C33.7731 17.2294 34.2705 17.6522 34.785 17.9462L40.2419 20.5377C41.9043 21.4494 42.7615 23.0001 42.778 24.7265V31.8393H48.6211C49.5821 31.7563 49.9917 30.9898 50 30.1849V23.46C50 22.725 49.7063 22.2106 49.1182 21.9165L40.6836 17.8908C42.871 16.2779 43.9694 13.8608 43.9906 11.3859C43.9325 9.42707 43.3341 7.60824 42.1432 6.20449C40.8988 4.85453 39.3553 4.06895 37.6504 4.05466Z"
-									fill="#7849FF"
-								/>
-							</svg>
-							<p className=" text-gray-600">1000+ Worker</p>
-						</div> */}
+
 						<div className=" flex items-center gap-2">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +125,12 @@ const Banner = () => {
 						</div>
 					</div>
 				</div>
-				<div className=" z-50">
+				<div
+					className=" z-50"
+					data-aos="fade-up"
+					data-aos-duration="2000"
+					data-aos-easing="ease-in-shine"
+				>
 					<img src={bannerImg} alt="" />
 				</div>
 			</div>

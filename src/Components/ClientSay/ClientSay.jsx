@@ -12,7 +12,12 @@ const ClientSay = () => {
 
 				<section className="max-w-7xl mx-auto grid grid-cols-1 gap-5 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
 					{/* One */}
-					<div className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200">
+					<div
+						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-shine"
+					>
 						<p className="leading-relaxed text-gray-600 mb-2">
 							&quot;Exceptional service! The team went above and beyond to make
 							our event a grand success. From the beautifully decorated venue to
@@ -37,7 +42,12 @@ const ClientSay = () => {
 						</div>
 					</div>
 					{/* Two */}
-					<div className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200">
+					<div
+						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
+						data-aos="fade-up"
+						data-aos-duration="1500"
+						data-aos-easing="ease-in-shine"
+					>
 						<p className="leading-relaxed text-gray-600">
 							&quot;I was truly impressed by the professionalism and dedication
 							of the event management team. They made our special day even more
@@ -59,7 +69,12 @@ const ClientSay = () => {
 						</div>
 					</div>
 					{/* Three */}
-					<div className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200">
+					<div
+						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-shine"
+					>
 						<p className="leading-relaxed text-gray-600">
 							&quot;The attention to detail and creativity exhibited by the team
 							were outstanding. Our guests were not only impressed but also

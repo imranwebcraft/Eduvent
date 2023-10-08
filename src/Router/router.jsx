@@ -11,6 +11,7 @@ import Team from "../Pages/Team";
 import Blog from "../Pages/Blog";
 import Profile from "../Pages/Profile";
 
+// All router
 const router = createBrowserRouter([
 	{
 		path: "/",

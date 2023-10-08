@@ -4,6 +4,7 @@ import ServiceCrad from "./ServiceCrad";
 const OurServices = ({ services }) => {
 	return (
 		<section className="text-center container mx-auto py-24 mt-16 lg:mt-0">
+			{/* Service section header */}
 			<div className=" space-y-2 mb-10">
 				<h1 className=" text-4xl font-bold text-text-one">
 					Our <span className="text-violet-500">Services</span>
@@ -14,6 +15,7 @@ const OurServices = ({ services }) => {
 				</p>
 			</div>
 
+			{/* Dynamically create all service card */}
 			<div className=" grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 				{services?.map(service => (
 					<ServiceCrad key={service.id} service={service}></ServiceCrad>

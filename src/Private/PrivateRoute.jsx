@@ -11,6 +11,7 @@ const PrivateRoute = ({ children }) => {
 	const location = useLocation();
 	console.log(location);
 
+	// If loading true show the loader to prevent redirect the user to the login page
 	if (loading) {
 		return (
 			<div className="flex h-screen items-center justify-center space-x-2">

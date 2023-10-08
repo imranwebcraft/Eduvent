@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 const ShowServiceDetails = ({ service }) => {
-	// Destructure
+	// Destructure signle service card data to show details about that service
 	const { name, image, details, short_description, tags } = service || {};
 
 	// Prevent auto scroll at the bottom
@@ -23,9 +23,12 @@ const ShowServiceDetails = ({ service }) => {
 
 	return (
 		<div className="mb-20">
+			{/* Helmet*/}
 			<Helmet>
 				<title>{name}</title>
 			</Helmet>
+
+			{/* Service details banner section */}
 			<div className="relative">
 				<img className=" w-full h-[60vh] object-cover" src={image} alt={name} />
 
@@ -44,7 +47,9 @@ const ShowServiceDetails = ({ service }) => {
 			{/* Grid Div */}
 			<div className=" grid gap-10 grid-cols-1 lg:grid-cols-3 mt-5">
 				{/* Left side */}
+
 				<div className="col-span-2">
+					{/* Service Details */}
 					<div>
 						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-5">
 							<p>Details</p>
@@ -55,12 +60,14 @@ const ShowServiceDetails = ({ service }) => {
 						</div>
 					</div>
 
+					{/* CTA to book event */}
+
 					<div className="text-xl font-medium mb-5">
 						<div className="flex gap-2 items-center  justify-center lg:justify-start mb-5">
 							<p>Date & time</p>
 							<BsCalendarDate className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
-						<div className="border border-violet-300 rounded-md p-8 w-full lg:w-[40%]">
+						<div className="border border-violet-300 rounded-md p-8 w-full lg:w-[50%]">
 							<p className=" text-gray-600">
 								{moment().format("dddd, MMMM Do YYYY")}
 							</p>
@@ -77,19 +84,30 @@ const ShowServiceDetails = ({ service }) => {
 						</div>
 					</div>
 
+					{/* Organization Contact */}
+
 					<div>
 						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-3">
 							<p>Organizer Contact</p>
 							<MdOutlineAlternateEmail className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 						<p className=" text-center lg:text-left">
-							Please go to
-							<span className=" text-violet-500 hover:underline hover:cursor-pointer">
+							Please visit
+							<span className="mx-1 text-violet-500 hover:underline hover:cursor-pointer">
 								www.edu-vent.com
 							</span>
-							and refer the FAQ section for more detail.
+							or click
+							<Link
+								to={"/contact"}
+								className=" mx-1 text-violet-500 hover:underline hover:cursor-pointer"
+							>
+								here
+							</Link>
+							to contact with us.
 						</p>
 					</div>
+
+					{/* Go back to homepage button */}
 
 					<div className=" flex justify-center lg:justify-start items-center">
 						<Link
@@ -104,8 +122,12 @@ const ShowServiceDetails = ({ service }) => {
 						</Link>
 					</div>
 				</div>
+
 				{/* Right side */}
+
 				<div className=" col-span-2 lg:col-span-1">
+					{/* Location section */}
+
 					<div className="">
 						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-5">
 							<p>Choose Location</p>
@@ -120,10 +142,14 @@ const ShowServiceDetails = ({ service }) => {
 							/>
 						</div>
 					</div>
+
+					{/* Short description */}
 					<div className=" mt-5 text-center lg:text-left ">
 						<p className=" text-lg font-medium"> Dream {name}</p>
 						<p className=" text-sm text-gray-600">{short_description}</p>
 					</div>
+
+					{/* Tags */}
 					<div className=" mt-5 ">
 						<div className=" flex gap-2 items-center justify-center lg:justify-start text-xl font-medium">
 							<p className=" text-lg font-medium"> Tags</p>
@@ -141,6 +167,8 @@ const ShowServiceDetails = ({ service }) => {
 							))}
 						</ul>
 					</div>
+
+					{/* Event info share CTA */}
 					<div className="mt-5">
 						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-2">
 							<p>Share with colleague</p>

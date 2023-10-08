@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 
 const TeamCard = ({ team }) => {
 	console.log(team);
-	// Destructure
-
+	// Destructure team JSON data
 	const { name, role, image, description } = team || {};
 
 	return (
 		<div className="px-12 py-8 transition-all duration-300 ease-in-out transform border border-gray-400 cursor-pointer rounded-md hover:border-transparent group hover:bg-violet-600 ">
+			{/* Top part */}
 			<div className="flex flex-col sm:-mx-4 sm:flex-row">
 				<img
 					className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-violet-200"
@@ -27,10 +27,12 @@ const TeamCard = ({ team }) => {
 				</div>
 			</div>
 
+			{/* Moddle Part */}
 			<p className="mt-4 text-gray-500 capitalize  group-hover:text-gray-100">
 				{description}
 			</p>
 
+			{/* Social icon */}
 			<div className="flex mt-4 -mx-2">
 				<a
 					href="#"

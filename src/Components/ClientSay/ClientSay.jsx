@@ -2,16 +2,19 @@ const ClientSay = () => {
 	return (
 		<section className="relative bg-white py-20">
 			<div className="relative container px-6 mx-auto">
-				<h1 className="text-2xl font-bold text-center text-gray-800 capitalize lg:text-3xl">
-					What our <span className="text-violet-500 ">clients</span> say
-				</h1>
+				{/* Header Title */}
+				<div>
+					<h1 className="text-2xl font-bold text-center text-gray-800 capitalize lg:text-3xl">
+						What our <span className="text-violet-500 ">clients</span> say
+					</h1>
+					<p className="max-w-2xl mx-auto mt-2 text-center text-gray-500">
+						Discover the Voices of Satisfaction and Success
+					</p>
+				</div>
 
-				<p className="max-w-2xl mx-auto mt-2 text-center text-gray-500">
-					Discover the Voices of Satisfaction and Success
-				</p>
-
+				{/* All testimonial Cards */}
 				<section className="max-w-7xl mx-auto grid grid-cols-1 gap-5 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
-					{/* One */}
+					{/* Testimonial Card One */}
 					<div
 						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
 						data-aos="flip-left"
@@ -41,7 +44,7 @@ const ClientSay = () => {
 							</div>
 						</div>
 					</div>
-					{/* Two */}
+					{/* Testimonial Card Two */}
 					<div
 						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
 						data-aos="flip-up"
@@ -68,7 +71,7 @@ const ClientSay = () => {
 							</div>
 						</div>
 					</div>
-					{/* Three */}
+					{/*Testimonial Card Three */}
 					<div
 						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
 						data-aos="flip-right"

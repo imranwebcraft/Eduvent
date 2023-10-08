@@ -3,6 +3,7 @@ import bannerbg from "../../assets/SVG/bannerbg.svg";
 const Banner = () => {
 	return (
 		<div className=" relative ">
+			{/* Banner Bloobs */}
 			<div
 				className=" hidden lg:block absolute -top-[3%] left-[0%]"
 				data-aos="zoom-in-up"
@@ -19,8 +20,9 @@ const Banner = () => {
 			>
 				<img src={bannerbg} alt="" />
 			</div>
+			{/* Main Banner Start */}
 			<div className="container mx-auto flex gap-2 flex-col lg:flex-row items-center h-[90vh]">
-				{/* Content */}
+				{/* Banner left part - Content part */}
 				<div className=" w-full">
 					<div
 						data-aos="fade-up"
@@ -38,6 +40,7 @@ const Banner = () => {
 								your journey to a brighter future.
 							</p>
 						</div>
+						{/* Banner button */}
 						<div className=" flex justify-center lg:justify-start">
 							<button
 								className="group relative inline-flex items-center overflow-hidden ring-4 ring-violet-200 rounded bg-violet-500  hover:bg-violet-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-violet-600 duration-300 ease-in-out transition-all"
@@ -65,6 +68,8 @@ const Banner = () => {
 							</button>
 						</div>
 					</div>
+
+					{/* Banner features */}
 
 					<div
 						className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 mt-5"
@@ -130,7 +135,7 @@ const Banner = () => {
 						</div>
 					</div>
 				</div>
-				{/* Image */}
+				{/* Banner right part - Image part */}
 				<div
 					className=" z-50 w-full"
 					data-aos="fade-up"

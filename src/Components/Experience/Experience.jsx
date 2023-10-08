@@ -6,7 +6,7 @@ const Experience = () => {
 	return (
 		<div className=" relative bg-violet-50 py-10">
 			<div className=" container mx-auto flex gap-5 lg:gap-0 flex-col lg:flex-row items-center">
-				{/* Image */}
+				{/* Left part - Image part */}
 				<div
 					className=" flex-1 top-[50%]"
 					data-aos="fade-right"
@@ -19,7 +19,7 @@ const Experience = () => {
 						alt="experience-image"
 					/>
 				</div>
-				{/* Content */}
+				{/* Right part - Content part */}
 				<div
 					className=" flex-1"
 					data-aos="flip-right"

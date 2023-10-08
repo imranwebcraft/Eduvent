@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 const BlogCard = ({ blog }) => {
+	// Destructure blog JSON data
 	const { name, role, image, description, blog_img } = blog || {};
 	return (
 		<div>

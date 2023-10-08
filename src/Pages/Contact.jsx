@@ -1,8 +1,15 @@
 import { Helmet } from "react-helmet-async";
 import Footer from "../Components/Footer/Footer";
 import contactImage from "../assets/Images/contactus.jpg";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Contact = () => {
+	// Prevent auto scroll at the bottom
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location.pathname]);
 	return (
 		<div>
 			<Helmet>

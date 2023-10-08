@@ -12,13 +12,14 @@ const Navbar = () => {
 	const handleLogOut = () => {
 		logOut()
 			.then(() => {
-				toast.success("Log out successful😍");
+				toast.success("Sign out successful😍");
 			})
 			.catch(() => {
 				toast.error("Something went wrong😥");
 			});
 	};
 
+	// All links here
 	const links = (
 		<>
 			<li className=" text-gray-700  hover:text-violet-500 duration-200 ease-in">
@@ -45,6 +46,8 @@ const Navbar = () => {
 					Contact
 				</NavLink>
 			</li>
+
+			{/* Links based on user present or not */}
 
 			{user && (
 				<>
@@ -76,12 +79,15 @@ const Navbar = () => {
 	return (
 		<div className="leading-relaxed">
 			<nav className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-5">
+				{/* Logo part */}
 				<div className=" flex gap-2 items-center">
 					<img className=" w-[50px] h-[40px]" src={logo} alt="" />
 					<Link className="  duration-200 text-2xl font-bold" to={"/"}>
 						Eduvent
 					</Link>
 				</div>
+
+				{/* Nav search button */}
 				<div className="space-y-1 mt-2">
 					<div className="relative">
 						<span className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -108,10 +114,12 @@ const Navbar = () => {
 					</div>
 				</div>
 
+				{/* Links */}
 				<ul className="flex flex-wrap gap-5 lg:gap-11 items-center font-medium mt-2">
 					{links}
 				</ul>
 
+				{/* Signup or  sign out button and user info (if user logged in) part*/}
 				{user ? (
 					<>
 						<div className=" flex items-center gap-2 mt-2">

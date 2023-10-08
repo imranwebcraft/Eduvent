@@ -1,35 +1,36 @@
 import PropTypes from "prop-types";
 import Rating from "react-rating";
-
-// import { AiOutlineStar } from "react-icons/ai";
-// import { AiTwotoneStar } from "react-icons/ai";
-
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const ServiceCrad = ({ service }) => {
+	// Destructure single service card data
 	const { id, name, image, details, price, rating } = service || {};
 
 	return (
 		<div className=" block  rounded-lg p-4 border border-violet-200 shadow-sm hover:shadow-md hover:cursor-pointer hover:scale-105 duration-300 ease-in-out transition-all shadow-violet-100">
+			{/* Searvice card image */}
 			<img className=" w-full h-[150px] object-cover" alt="Home" src={image} />
 
 			<div className="my-2">
+				{/* Searvice card Name */}
 				<div>
 					<div>
 						<p className="font-semibold text-xl">{name}</p>
 					</div>
 				</div>
-
+				{/* Searvice card details (in short) */}
 				<div className="mt-2 text-center">
 					<p className=" text-gray-600">{details?.slice(0, 120) + "..."}</p>
 				</div>
 			</div>
 			<div className=" flex justify-center gap-5 items-center mb-2">
+				{/* Searvice cost */}
 				<p className=" text-lg font-medium">
 					Price: <span className=" text-base">{price} TK</span>
 				</p>
+				{/* React rating library */}
 				<p className=" flex items-center">
 					<Rating
 						initialRating={rating}
@@ -44,7 +45,7 @@ const ServiceCrad = ({ service }) => {
 					<span className=" text-base">{rating}</span>
 				</p>
 			</div>
-
+			{/* Searvice card CTA button */}
 			<div>
 				<Link
 					to={`/service/${id}`}

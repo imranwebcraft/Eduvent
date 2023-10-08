@@ -10,6 +10,8 @@ import {
 	signOut,
 	updateProfile,
 } from "firebase/auth";
+
+// Import auth from firebase config file
 import auth from "../Config/firebase.config";
 
 // ******Create contect******

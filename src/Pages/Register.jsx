@@ -122,6 +122,7 @@ const Register = () => {
 				{/* Form */}
 				<div className=" w-full lg:w-3/5">
 					<div className=" w-full lg:w-1/2 mx-auto h-full flex flex-col gap-10 items-center justify-center">
+						{/* Register Header  */}
 						<div className=" text-center">
 							<span className="flex justify-center">
 								<img src={logo} alt="" />
@@ -137,7 +138,9 @@ const Register = () => {
 							</p>
 						</div>
 
+						{/* Actual Form start */}
 						<form onSubmit={handleRegistration} className="w-full">
+							{/* Name Field */}
 							<div className=" mt-5">
 								<label className="block font-medium">Name</label>
 								<input
@@ -148,6 +151,9 @@ const Register = () => {
 									required
 								/>
 							</div>
+
+							{/* Email Field */}
+
 							<div className=" mt-5">
 								<label className="block fontme">Email</label>
 								<input
@@ -158,6 +164,9 @@ const Register = () => {
 									required
 								/>
 							</div>
+
+							{/* Password Field */}
+
 							<div className="relative mt-5">
 								<div className=" flex items-center justify-between">
 									<label className="block fontme">Password</label>
@@ -169,6 +178,8 @@ const Register = () => {
 									placeholder="Enter your Password"
 									required
 								/>
+
+								{/* Handle password show or hidden icon */}
 								<div
 									onClick={() => setShowPassword(!showPassword)}
 									className=" absolute top-9 right-3 hover:cursor-pointer"
@@ -180,16 +191,18 @@ const Register = () => {
 									)}
 								</div>
 							</div>
+
+							{/* Photo upload field */}
 							<div className=" mt-5">
 								<label className="block fontme">Attachment</label>
 								<input
 									className="w-full text-gray-900  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									name="files"
 									placeholder="Enter image URL"
-									required
 								/>
 							</div>
 
+							{/* Terms and Privacy Policy */}
 							<div className=" flex items-center mt-4">
 								<input
 									className="mr-2 rounded-sm focus:ring-violet-500 border-gray-300 text-violet-500 placeholder:text-sm placeholder:opacity-80"
@@ -198,11 +211,17 @@ const Register = () => {
 								/>
 								<label>
 									I agree to the
-									<a className="text-violet-500 font-medium px-2" href="#">
+									<a
+										className="hover:underline text-violet-500 font-medium px-2"
+										href="#"
+									>
 										Terms
 									</a>
 									and
-									<a className="text-violet-500 font-medium px-2" href="#">
+									<a
+										className="hover:underline text-violet-500 font-medium px-2"
+										href="#"
+									>
 										Privacy Policy
 									</a>
 								</label>

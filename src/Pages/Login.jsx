@@ -97,6 +97,7 @@ const Login = () => {
 				{/* Form */}
 				<div className=" w-full lg:w-3/5">
 					<div className=" w-full lg:w-1/2 mx-auto h-full flex flex-col gap-10 items-center justify-center">
+						{/* Form header */}
 						<div className=" text-center">
 							<span className="flex justify-center">
 								<img src={logo} alt="" />
@@ -114,7 +115,9 @@ const Login = () => {
 							</p>
 						</div>
 
+						{/* Form start */}
 						<form onSubmit={handleLogin} className="w-full">
+							{/* Email  field*/}
 							<div className=" mt-5">
 								<label className="block font-medium">Email</label>
 								<input
@@ -125,6 +128,9 @@ const Login = () => {
 									required
 								/>
 							</div>
+
+							{/* Password  field*/}
+
 							<div className="relative mt-5">
 								<div className=" flex items-center justify-between">
 									<label className="block font-medium">Password</label>
@@ -147,6 +153,8 @@ const Login = () => {
 									)}
 								</div>
 							</div>
+
+							{/* Tearms and Privacy policy */}
 							<div className=" flex items-center mt-4">
 								<input
 									className="mr-2 rounded-sm focus:ring-violet-500 border-gray-300 text-violet-500"
@@ -159,12 +167,16 @@ const Login = () => {
 										Terms
 									</a>
 									and
-									<a className="text-violet-500 font-medium px-2" href="#">
+									<a
+										className="hover:underline text-violet-500 font-medium px-2"
+										href="#"
+									>
 										Privacy Policy
 									</a>
 								</label>
 							</div>
 
+							{/* Login Button */}
 							<div className=" w-full text-center py-2 rounded-lg bg-violet-500 hover:bg-violet-600 mt-3  duration-300 ease-in-out">
 								<input
 									className=" text-white font-medium hover:cursor-pointer"
@@ -173,13 +185,14 @@ const Login = () => {
 								/>
 							</div>
 
+							{/* Or continue with */}
 							<div className=" grid grid-cols-3 items-center mt-5">
 								<hr />
 								<p className=" text-center">Or Continue With</p>
 								<hr />
 							</div>
-							{/* Social Login */}
 
+							{/* Social Login */}
 							<div className=" grid gap-2 grid-cols-2 mt-2">
 								{/* Google */}
 								<button
@@ -211,7 +224,8 @@ const Login = () => {
 									</span>
 								</button>
 							</div>
-							{/* Copyright */}
+
+							{/* Website Copyright */}
 							<div className=" flex  justify-center mt-5">
 								<p className=" text-sm text-gray-600">
 									Copyright&copy;Eduvent.com

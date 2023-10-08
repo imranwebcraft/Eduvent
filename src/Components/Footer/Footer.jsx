@@ -5,6 +5,7 @@ const Footer = () => {
 		<div>
 			<footer className="bg-white transition-all duration-300 ease-in-out">
 				<div className=" px-4 pb-8 pt-16 sm:px-6 lg:px-8">
+					{/* Newsleter div */}
 					<div className="mx-auto max-w-md">
 						<strong className="block text-center text-xl font-bold text-text-one sm:text-3xl">
 							Subscribe To Our
@@ -33,7 +34,10 @@ const Footer = () => {
 						</form>
 					</div>
 
+					{/* Main footer div */}
+
 					<div className=" container mx-auto mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
+						{/* Footer left part */}
 						<div className=" mx-auto max-w-sm lg:max-w-none">
 							<div className=" flex flex-col justify-center items-center lg:items-start">
 								<img src={logo} alt="logo" className="" />
@@ -113,6 +117,8 @@ const Footer = () => {
 								</a>
 							</div>
 						</div>
+
+						{/* Footer right part */}
 
 						<div className="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
 							<div>

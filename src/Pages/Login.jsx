@@ -214,7 +214,7 @@ const Login = () => {
 							{/* Copyright */}
 							<div className=" flex  justify-center mt-5">
 								<p className=" text-sm text-gray-600">
-									Copyright &copy;Eduvent.com
+									Copyright&copy;Eduvent.com
 								</p>
 							</div>
 						</form>

@@ -240,7 +240,7 @@ const Footer = () => {
 
 					<div className="mt-16 border-t border-gray-100 pt-8">
 						<p className="text-center text-xs/relaxed text-gray-500">
-							© Edu-Vent 2023. All rights reserved.
+							©Eduvent 2023. All rights reserved.
 							<br />
 							Created with
 							<a

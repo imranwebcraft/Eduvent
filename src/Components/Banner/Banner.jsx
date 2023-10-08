@@ -4,7 +4,7 @@ const Banner = () => {
 	return (
 		<div className=" relative ">
 			<div
-				className=" hidden lg:block absolute -top-[3%] left-[-2%]"
+				className=" hidden lg:block absolute -top-[3%] left-[0%]"
 				data-aos="zoom-in-up"
 				data-aos-duration="2000"
 				data-aos-easing="ease-in-sine"
@@ -28,7 +28,7 @@ const Banner = () => {
 						data-aos-easing="ease-in-shine"
 					>
 						<div>
-							<h1 className=" ml-0 pl-0 z-50 text-5xl text-center lg:text-left md:text-7xl font-extrabold leading-[60px] lg:leading-[90px] mb-2">
+							<h1 className=" ml-0 pl-0 z-50 text-4xl text-center lg:text-left md:text-7xl font-extrabold leading-[50px] lg:leading-[90px] mb-2">
 								The <span className=" text-violet-500">Smart</span> <br />{" "}
 								Choice For <span className=" text-violet-500">Future</span>
 							</h1>
@@ -67,7 +67,7 @@ const Banner = () => {
 					</div>
 
 					<div
-						className="flex flex-col lg:flex-row items-center gap-10 mt-5"
+						className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 mt-5"
 						data-aos="fade-up"
 						data-aos-duration="3000"
 					>

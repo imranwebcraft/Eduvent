@@ -9,6 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import { BsTags } from "react-icons/bs";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const ShowServiceDetails = ({ service }) => {
 	// Destructure
@@ -22,6 +23,9 @@ const ShowServiceDetails = ({ service }) => {
 
 	return (
 		<div className="mb-20">
+			<Helmet>
+				<title>{name}</title>
+			</Helmet>
 			<div className="relative">
 				<img className=" w-full h-[60vh] object-cover" src={image} alt={name} />
 

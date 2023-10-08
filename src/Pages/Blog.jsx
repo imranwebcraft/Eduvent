@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import BlogCard from "../Components/BlogCard/BlogCard";
 import Footer from "../Components/Footer/Footer";
 import useBlogs from "../Hook/blogs";
@@ -8,6 +9,10 @@ const Blog = () => {
 
 	return (
 		<div className=" mt-20">
+			<Helmet>
+				<title>Eduvent - Blog</title>
+			</Helmet>
+
 			<div className="container px-6  mx-auto">
 				<div className="text-center">
 					<h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">

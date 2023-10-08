@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import Footer from "../Components/Footer/Footer";
 import contactImage from "../assets/Images/contactus.jpg";
 
 const Contact = () => {
 	return (
 		<div>
+			<Helmet>
+				<title>Eduvent - Contact</title>
+			</Helmet>
+
 			<section className="min-h-screen bg-white">
 				<div className="container px-6 py-10 mx-auto">
 					<div className="lg:flex lg:items-center lg:-mx-10">

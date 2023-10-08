@@ -8,6 +8,7 @@ import { PiEyeSlashDuotone } from "react-icons/pi";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 	// Declare state to manage show and hide password visibility
@@ -84,6 +85,9 @@ const Login = () => {
 
 	return (
 		<div className=" container mx-auto  min-h-screen mt-10">
+			<Helmet>
+				<title>Eduvent - Login</title>
+			</Helmet>
 			<div className=" h-full flex justify-between items-center">
 				{/* Form */}
 				<div className=" w-3/5">

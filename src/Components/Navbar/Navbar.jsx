@@ -50,7 +50,7 @@ const Navbar = () => {
 					to="/contact"
 					className={({ isActive }) => (isActive ? " text-violet-500  " : "")}
 				>
-					Contact us
+					Contact
 				</NavLink>
 			</li>
 		</>
@@ -91,7 +91,7 @@ const Navbar = () => {
 					</div>
 				</div>
 
-				<ul className="flex gap-11 items-center font-semibold">{links}</ul>
+				<ul className="flex gap-11 items-center font-medium">{links}</ul>
 
 				{user ? (
 					<>

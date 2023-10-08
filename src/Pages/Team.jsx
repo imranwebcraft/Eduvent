@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TeamCard from "../Components/TeamCard.jsx/TeamCard";
 import Footer from "../Components/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Team = () => {
 	// State for team members
@@ -14,6 +15,9 @@ const Team = () => {
 
 	return (
 		<div className=" mt-20">
+			<Helmet>
+				<title> Eduvent - Team </title>
+			</Helmet>
 			<h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl ">
 				Our <span className="text-violet-500">Management Team</span>
 			</h1>

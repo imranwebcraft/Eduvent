@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 
 import google from "../assets/SVG/Google.svg";
 import github from "../assets/SVG/github.svg";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 	// Declare state to manage show and hide password visibility
@@ -108,6 +109,9 @@ const Register = () => {
 
 	return (
 		<div className=" container mx-auto min-h-screen mt-10">
+			<Helmet>
+				<title>Eduvent - Register</title>
+			</Helmet>
 			<div className=" h-full flex justify-between items-center">
 				{/* Form */}
 				<div className=" w-3/5">

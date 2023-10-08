@@ -4,9 +4,9 @@ const BlogCard = ({ blog }) => {
 	const { name, role, image, description, blog_img } = blog || {};
 	return (
 		<div>
-			<div className="relative">
+			<div className="relative hover:cursor-pointer">
 				<img
-					className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+					className="object-cover object-center w-full h-64 rounded-lg lg:h-80 hover:bg-violet-200 hover:shadow-xl hover:shadow-violet-200 duration-300 ease-linear"
 					src={blog_img}
 					alt=""
 				/>

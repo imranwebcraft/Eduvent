@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import errorIllustration from "../assets/Images/error.png";
+import { Helmet } from "react-helmet-async";
 
 const ErrorPage = () => {
 	return (
 		<div>
+			<Helmet>
+				<title>404 - Not Found</title>
+			</Helmet>
 			<section className="bg-white">
 				<div className="container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12">
 					<div className="wf-ull lg:w-1/2">

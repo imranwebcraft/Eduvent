@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyBRdGpI3UcljY2M2jxTzXsP45Tmjy9XguI",
-	authDomain: "educationa-event-management.firebaseapp.com",
-	projectId: "educationa-event-management",
-	storageBucket: "educationa-event-management.appspot.com",
-	messagingSenderId: "839188075392",
-	appId: "1:839188075392:web:94cd3283e5007062cd2765",
+	apiKey: import.meta.env.VITE_APIKEY,
+	authDomain: import.meta.env.VITE_AUTHDOMAIN,
+	projectId: import.meta.env.VITE_PROJECTID,
+	storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+	messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+	appId: import.meta.env.VITE_APPID,
 };
 
 const app = initializeApp(firebaseConfig);

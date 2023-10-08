@@ -39,20 +39,37 @@ const Navbar = () => {
 			</li>
 			<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
 				<NavLink
-					to="/blog"
-					className={({ isActive }) => (isActive ? " text-violet-500  " : "")}
-				>
-					Blog
-				</NavLink>
-			</li>
-			<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
-				<NavLink
 					to="/contact"
 					className={({ isActive }) => (isActive ? " text-violet-500  " : "")}
 				>
 					Contact
 				</NavLink>
 			</li>
+
+			{user && (
+				<>
+					<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
+						<NavLink
+							to="/blog"
+							className={({ isActive }) =>
+								isActive ? " text-violet-500  " : ""
+							}
+						>
+							Blog
+						</NavLink>
+					</li>
+					<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
+						<NavLink
+							to="/profile"
+							className={({ isActive }) =>
+								isActive ? " text-violet-500  " : ""
+							}
+						>
+							Profile
+						</NavLink>
+					</li>
+				</>
+			)}
 		</>
 	);
 

@@ -9,6 +9,7 @@ import PrivateRoute from "../Private/PrivateRoute";
 import Contact from "../Pages/Contact";
 import Team from "../Pages/Team";
 import Blog from "../Pages/Blog";
+import Profile from "../Pages/Profile";
 
 const router = createBrowserRouter([
 	{
@@ -28,17 +29,21 @@ const router = createBrowserRouter([
 
 			{
 				path: "/team",
-				element: (
-					<PrivateRoute>
-						<Team></Team>
-					</PrivateRoute>
-				),
+				element: <Team></Team>,
 			},
 			{
 				path: "/blog",
 				element: (
 					<PrivateRoute>
 						<Blog></Blog>
+					</PrivateRoute>
+				),
+			},
+			{
+				path: "/profile",
+				element: (
+					<PrivateRoute>
+						<Profile></Profile>
 					</PrivateRoute>
 				),
 			},

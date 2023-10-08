@@ -5,7 +5,7 @@ import team from "../../assets/SVG/jigsaw.svg";
 const Experience = () => {
 	return (
 		<div className=" relative bg-violet-50 py-10">
-			<div className=" container mx-auto flex items-center">
+			<div className=" container mx-auto flex gap-5 lg:gap-0 flex-col lg:flex-row items-center">
 				{/* Image */}
 				<div
 					className=" flex-1 top-[50%]"
@@ -27,7 +27,7 @@ const Experience = () => {
 					data-aos-easing="ease-in"
 				>
 					<div className=" mb-11">
-						<h3 className=" text-3xl font-bold">
+						<h3 className=" text-3xl font-bold text-center lg:text-left">
 							Premium <span className=" text-violet-500">Event</span> Experience
 						</h3>
 					</div>

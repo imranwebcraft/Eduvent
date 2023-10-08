@@ -31,7 +31,7 @@ const ShowServiceDetails = ({ service }) => {
 
 				<div className="absolute inset-0 bg-gradient-to-b from-gray-400 via-gray-700 to-gray-800 opacity-60"></div>
 				<h1
-					className=" flex justify-center items-center absolute top-[40%] left-[25%] right-[25%]
+					className=" flex justify-center items-center text-center lg:text-left absolute top-[40%] left-[25%] right-[25%]
 				
 				text-white text-6xl font-bold
 				
@@ -42,22 +42,25 @@ const ShowServiceDetails = ({ service }) => {
 			</div>
 
 			{/* Grid Div */}
-			<div className=" grid gap-10 grid-cols-3 mt-5">
-				<div className=" col-span-2">
+			<div className=" grid gap-10 grid-cols-1 lg:grid-cols-3 mt-5">
+				{/* Left side */}
+				<div className="col-span-2">
 					<div>
-						<div className="flex gap-2 items-center text-xl font-medium mb-5">
+						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-5">
 							<p>Details</p>
 							<MdOutlineDescription className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
-						<div className=" text-justify leading-relaxed mb-5">{details}</div>
+						<div className=" text-justify text-gray-800 leading-relaxed mb-5">
+							{details}
+						</div>
 					</div>
 
 					<div className="text-xl font-medium mb-5">
-						<div className="flex gap-2 items-center mb-5">
+						<div className="flex gap-2 items-center  justify-center lg:justify-start mb-5">
 							<p>Date & time</p>
 							<BsCalendarDate className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
-						<div className="border border-violet-300 rounded-md p-8 w-[40%]">
+						<div className="border border-violet-300 rounded-md p-8 w-full lg:w-[40%]">
 							<p className=" text-gray-600">
 								{moment().format("dddd, MMMM Do YYYY")}
 							</p>
@@ -75,55 +78,59 @@ const ShowServiceDetails = ({ service }) => {
 					</div>
 
 					<div>
-						<div className="flex gap-2 items-center text-xl font-medium mb-3">
+						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-3">
 							<p>Organizer Contact</p>
 							<MdOutlineAlternateEmail className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
-						<p>
-							Please go to{" "}
+						<p className=" text-center lg:text-left">
+							Please go to
 							<span className=" text-violet-500 hover:underline hover:cursor-pointer">
 								www.edu-vent.com
-							</span>{" "}
+							</span>
 							and refer the FAQ section for more detail.
 						</p>
 					</div>
 
-					<Link
-						to={"/"}
-						className=" mt-5 group relative inline-block overflow-hidden border border-violet-600 px-8 py-2 focus:outline-none focus:ring focus:ring-violet-200"
-						href="/download"
-					>
-						<span className="absolute inset-y-0 right-0 w-[2px] bg-violet-600 transition-all group-hover:w-full group-active:bg-violet-500"></span>
-
-						<span className="relative text-sm font-medium text-violet-500 transition-colors group-hover:text-white">
-							Go Back
-						</span>
-					</Link>
+					<div className=" flex justify-center lg:justify-start items-center">
+						<Link
+							to={"/"}
+							className=" mt-5 group relative inline-block overflow-hidden border border-violet-600 px-8 py-2 focus:outline-none focus:ring focus:ring-violet-200"
+							href="/download"
+						>
+							<span className="absolute inset-y-0 right-0 w-[2px] bg-violet-600 transition-all group-hover:w-full group-active:bg-violet-500"></span>
+							<span className="relative text-sm font-medium text-violet-500 transition-colors group-hover:text-white">
+								Go Back
+							</span>
+						</Link>
+					</div>
 				</div>
-				<div className="">
-					<div>
-						<div className="flex gap-2 items-center text-xl font-medium mb-5">
+				{/* Right side */}
+				<div className=" col-span-2 lg:col-span-1">
+					<div className="">
+						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-5">
 							<p>Choose Location</p>
 							<MdOutlineLocationOn className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 
-						<img
-							className=" w-full h-[300px] object-cover"
-							src={map}
-							alt="map-image"
-						/>
+						<div className="">
+							<img
+								className="w-full mx-auto h-[300px] object-cover rounded-lg"
+								src={map}
+								alt="map-image"
+							/>
+						</div>
 					</div>
-					<div className=" mt-5 ">
+					<div className=" mt-5 text-center lg:text-left ">
 						<p className=" text-lg font-medium"> Dream {name}</p>
 						<p className=" text-sm text-gray-600">{short_description}</p>
 					</div>
 					<div className=" mt-5 ">
-						<div className=" flex gap-2 items-center text-xl font-medium">
+						<div className=" flex gap-2 items-center justify-center lg:justify-start text-xl font-medium">
 							<p className=" text-lg font-medium"> Tags</p>
 							<BsTags className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
 
-						<ul className=" space-y-2">
+						<ul className=" space-y-2 text-center lg:text-left">
 							{tags?.map((tag, index) => (
 								<li
 									key={index}
@@ -135,11 +142,11 @@ const ShowServiceDetails = ({ service }) => {
 						</ul>
 					</div>
 					<div className="mt-5">
-						<div className="flex gap-2 items-center text-xl font-medium mb-2">
+						<div className="flex gap-2 items-center justify-center lg:justify-start text-xl font-medium mb-2">
 							<p>Share with colleague</p>
 							<AiOutlineShareAlt className=" opacity-90 text-violet-500 hover:text-violet-600 hover:cursor-pointer duration-300 ease-linear" />
 						</div>
-						<div className=" flex items-center gap-5">
+						<div className=" flex items-center justify-center lg:justify-start gap-5">
 							<div className=" cursor-pointer">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"

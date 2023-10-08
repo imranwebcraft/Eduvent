@@ -74,15 +74,15 @@ const Navbar = () => {
 	);
 
 	return (
-		<div className="font-inter leading-relaxed">
-			<nav className="container mx-auto flex items-center justify-between py-5">
+		<div className="leading-relaxed">
+			<nav className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-5">
 				<div className=" flex gap-2 items-center">
 					<img className=" w-[50px] h-[40px]" src={logo} alt="" />
 					<Link className="  duration-200 text-2xl font-bold" to={"/"}>
 						Eduvent
 					</Link>
 				</div>
-				<div className="space-y-1">
+				<div className="space-y-1 mt-2">
 					<div className="relative">
 						<span className="absolute inset-y-0 left-0 flex items-center pl-2">
 							<button
@@ -103,16 +103,16 @@ const Navbar = () => {
 							type="text"
 							name="Search"
 							placeholder="Search event..."
-							className="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none focus:border-violet-500 focus:ring focus:ring-violet-200"
+							className="w-full py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none focus:border-violet-500 focus:ring focus:ring-violet-200"
 						/>
 					</div>
 				</div>
 
-				<ul className="flex gap-11 items-center font-medium">{links}</ul>
+				<ul className="flex gap-11 items-center font-medium mt-2">{links}</ul>
 
 				{user ? (
 					<>
-						<div className=" flex items-center gap-2">
+						<div className=" flex items-center gap-2 mt-2">
 							<div className=" bg-gray-100 px-2 py-[5px] rounded hover:bg-gray-200 text-sm font-medium">
 								{user.displayName}
 							</div>
@@ -137,7 +137,7 @@ const Navbar = () => {
 					</>
 				) : (
 					<>
-						<div className="  hover:cursor-pointer  bg-violet-500 hover:bg-violet-600 px-6 py-[6px] ring ring-violet-200  text-white rounded duration-300 ease-linear">
+						<div className=" mt-2  hover:cursor-pointer  bg-violet-500 hover:bg-violet-600 px-6 py-[6px] ring ring-violet-200  text-white rounded duration-300 ease-linear">
 							<Link className=" text-sm font-medium " to={"/register"}>
 								Sign Up
 							</Link>

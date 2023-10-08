@@ -14,7 +14,7 @@ const ClientSay = () => {
 					{/* One */}
 					<div
 						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
-						data-aos="fade-right"
+						data-aos="flip-left"
 						data-aos-duration="1000"
 						data-aos-easing="ease-in-shine"
 					>
@@ -44,7 +44,7 @@ const ClientSay = () => {
 					{/* Two */}
 					<div
 						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
-						data-aos="fade-up"
+						data-aos="flip-up"
 						data-aos-duration="1500"
 						data-aos-easing="ease-in-shine"
 					>
@@ -71,7 +71,7 @@ const ClientSay = () => {
 					{/* Three */}
 					<div
 						className="flex flex-col hover:cursor-pointer p-8 shadow-lg rounded-lg hover:shadow-md duration-300 ease-linear border-violet-200"
-						data-aos="fade-left"
+						data-aos="flip-right"
 						data-aos-duration="1000"
 						data-aos-easing="ease-in-shine"
 					>

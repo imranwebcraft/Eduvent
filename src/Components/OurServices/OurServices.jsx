@@ -3,7 +3,7 @@ import ServiceCrad from "./ServiceCrad";
 
 const OurServices = ({ services }) => {
 	return (
-		<section className="text-center container mx-auto py-24">
+		<section className="text-center container mx-auto py-24 mt-16 lg:mt-0">
 			<div className=" space-y-2 mb-10">
 				<h1 className=" text-4xl font-bold text-text-one">
 					Our <span className="text-violet-500">Services</span>

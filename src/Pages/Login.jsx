@@ -5,7 +5,7 @@ import google from "../assets/SVG/Google.svg";
 import github from "../assets/SVG/github.svg";
 import { PiEyeDuotone } from "react-icons/pi";
 import { PiEyeSlashDuotone } from "react-icons/pi";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
@@ -21,6 +21,11 @@ const Login = () => {
 	const location = useLocation();
 	// Use navigate hook to navigate the user after login
 	const navigate = useNavigate();
+
+	// Prevent auto scroll at the bottom
+	useEffect(() => {
+		window.scrollTo(0, 0); // Scroll to the top of the page on route change
+	}, [location.pathname]);
 
 	// Login handle
 	const handleLogin = e => {
@@ -84,7 +89,7 @@ const Login = () => {
 	};
 
 	return (
-		<div className=" container mx-auto  min-h-screen mt-10">
+		<div className=" container mx-auto  min-h-screen mt-20">
 			<Helmet>
 				<title>Eduvent - Login</title>
 			</Helmet>

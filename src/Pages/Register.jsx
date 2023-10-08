@@ -3,8 +3,8 @@ import logo from "../assets/SVG/Logo.svg";
 import signUpImg from "../assets/Images/register3.webp";
 import { PiEyeDuotone } from "react-icons/pi";
 import { PiEyeSlashDuotone } from "react-icons/pi";
-import { Link, useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -22,6 +22,12 @@ const Register = () => {
 
 	//Use navigate hook to redirect the user after register an account
 	const navigate = useNavigate();
+
+	// Prevent auto scroll at the bottom
+	const location = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0); // Scroll to the top of the page on route change
+	}, [location.pathname]);
 
 	// Form submit handler
 	const handleRegistration = e => {
@@ -108,7 +114,7 @@ const Register = () => {
 	};
 
 	return (
-		<div className=" container mx-auto min-h-screen mt-10">
+		<div className=" container mx-auto min-h-screen mt-20">
 			<Helmet>
 				<title>Eduvent - Register</title>
 			</Helmet>

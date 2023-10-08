@@ -35,14 +35,19 @@ const Footer = () => {
 
 					<div className=" container mx-auto mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
 						<div className=" mx-auto max-w-sm lg:max-w-none">
-							<img src={logo} alt="logo" className="" />
-							<span className=" text-xl font-bold text-text-one ">Eduvent</span>
-							<p className="mt-4 text-center w-[80%] text-gray-500 lg:text-left">
-								Increase reach, engagement, registrations, and revenue across
-								your institution&apos;s entire events program for students,
-								parents, alumni, or staff with an end-to-end event technology
-								platform powered by Edu-Vent.
-							</p>
+							<div className=" flex flex-col justify-center items-center lg:items-start">
+								<img src={logo} alt="logo" className="" />
+
+								<span className=" text-xl font-bold text-text-one ">
+									Eduvent
+								</span>
+								<p className="mt-4 text-center w-[80%] text-gray-500  lg:text-left">
+									Increase reach, engagement, registrations, and revenue across
+									your institution&apos;s entire events program for students,
+									parents, alumni, or staff with an end-to-end event technology
+									platform powered by Edu-Vent.
+								</p>
+							</div>
 
 							<div className="mt-6 flex justify-center gap-4 lg:justify-start">
 								<a

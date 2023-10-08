@@ -4,7 +4,7 @@ const Banner = () => {
 	return (
 		<div className=" relative ">
 			<div
-				className=" absolute -top-[3%] left-[0%]"
+				className=" hidden lg:block absolute -top-[3%] left-[-2%]"
 				data-aos="zoom-in-up"
 				data-aos-duration="2000"
 				data-aos-easing="ease-in-sine"
@@ -12,57 +12,62 @@ const Banner = () => {
 				<img src={bannerbg} alt="" />
 			</div>
 			<div
-				className=" absolute bottom-[10%] right-[0%]"
+				className="hidden lg:block absolute bottom-[10%] right-[0%]"
 				data-aos="zoom-in-up"
 				data-aos-duration="2000"
 				data-aos-easing="ease-in-shine"
 			>
 				<img src={bannerbg} alt="" />
 			</div>
-			<div className="container mx-auto flex items-center h-[90vh]">
-				<div>
+			<div className="container mx-auto flex gap-2 flex-col lg:flex-row items-center h-[90vh]">
+				{/* Content */}
+				<div className=" w-full">
 					<div
 						data-aos="fade-up"
 						data-aos-duration="2000"
 						data-aos-easing="ease-in-shine"
 					>
-						<h1 className=" z-50 text-7xl font-extrabold leading-[90px] mb-2">
-							The <span className=" text-violet-500">Smart</span> <br /> Choice
-							For <span className=" text-violet-500">Future</span>
-						</h1>
-						<p className=" z-50 leading-7 mb-5">
-							Elearn is a global training provider based across the UK that
-							specialises in accredited and bespoke training courses. We crush
-							the...
-						</p>
-						<button
-							className="group relative inline-flex items-center overflow-hidden ring-4 ring-violet-200 rounded bg-violet-500  hover:bg-violet-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-violet-600 duration-300 ease-in-out transition-all"
-							href="/download"
-						>
-							<span className="absolute -end-full transition-all group-hover:end-4">
-								<svg
-									className="h-5 w-5 rtl:rotate-180"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth="2"
-										d="M17 8l4 4m0 0l-4 4m4-4H3"
-									/>
-								</svg>
-							</span>
-							<span className="text-sm font-medium transition-all group-hover:me-4">
-								Hire Us Now
-							</span>
-						</button>
+						<div>
+							<h1 className=" ml-0 pl-0 z-50 text-5xl text-center lg:text-left md:text-7xl font-extrabold leading-[60px] lg:leading-[90px] mb-2">
+								The <span className=" text-violet-500">Smart</span> <br />{" "}
+								Choice For <span className=" text-violet-500">Future</span>
+							</h1>
+							<p className=" z-50 leading-7 mb-5  text-gray-500 text-center lg:text-left">
+								Unleashing Potential, Nurturing Excellence - Your Path to
+								Success Begins Here. Explore boundless opportunities and embrace
+								your journey to a brighter future.
+							</p>
+						</div>
+						<div className=" flex justify-center lg:justify-start">
+							<button
+								className="group relative inline-flex items-center overflow-hidden ring-4 ring-violet-200 rounded bg-violet-500  hover:bg-violet-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-violet-600 duration-300 ease-in-out transition-all"
+								href="/download"
+							>
+								<span className="absolute -end-full transition-all group-hover:end-4">
+									<svg
+										className="h-5 w-5 rtl:rotate-180"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
+											d="M17 8l4 4m0 0l-4 4m4-4H3"
+										/>
+									</svg>
+								</span>
+								<span className="text-sm font-medium transition-all group-hover:me-4">
+									Hire Us Now
+								</span>
+							</button>
+						</div>
 					</div>
 
 					<div
-						className=" flex items-center gap-10 mt-5"
+						className="flex flex-col lg:flex-row items-center gap-10 mt-5"
 						data-aos="fade-up"
 						data-aos-duration="3000"
 					>
@@ -125,8 +130,9 @@ const Banner = () => {
 						</div>
 					</div>
 				</div>
+				{/* Image */}
 				<div
-					className=" z-50"
+					className=" z-50 w-full"
 					data-aos="fade-up"
 					data-aos-duration="2000"
 					data-aos-easing="ease-in-shine"

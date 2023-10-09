@@ -4,7 +4,7 @@ import signUpImg from "../assets/Images/register3.webp";
 import { PiEyeDuotone } from "react-icons/pi";
 import { PiEyeSlashDuotone } from "react-icons/pi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -15,6 +15,12 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
 	// Declare state to manage show and hide password visibility
 	const [showPassword, setShowPassword] = useState(false);
+
+	// useRef hook to get automatically focus to the input field when user come to register page
+	const nameRef = useRef(null);
+	useEffect(() => {
+		nameRef.current.focus();
+	}, []);
 
 	// Use state data
 	const { createUser, googleSignIn, gitHubSignIn, updateUserProfile } =
@@ -144,6 +150,7 @@ const Register = () => {
 							<div className=" mt-5">
 								<label className="block font-medium">Name</label>
 								<input
+									ref={nameRef}
 									className="w-full text-gray-900  border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500  placeholder:text-sm placeholder:opacity-80"
 									type="text"
 									name="name"

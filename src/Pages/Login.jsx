@@ -5,7 +5,7 @@ import google from "../assets/SVG/Google.svg";
 import github from "../assets/SVG/github.svg";
 import { PiEyeDuotone } from "react-icons/pi";
 import { PiEyeSlashDuotone } from "react-icons/pi";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
@@ -13,6 +13,12 @@ import { Helmet } from "react-helmet-async";
 const Login = () => {
 	// Declare state to manage show and hide password visibility
 	const [showPassword, setShowPassword] = useState(false);
+
+	// useRef hook to get automatically focus to the input field when user come to register page
+	const emailRef = useRef(null);
+	useEffect(() => {
+		emailRef.current.focus();
+	}, []);
 
 	// Use state data
 	const { siginIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
@@ -121,6 +127,7 @@ const Login = () => {
 							<div className=" mt-5">
 								<label className="block font-medium">Email</label>
 								<input
+									ref={emailRef}
 									className="w-full text-gray-900   border-gray-300 rounded-lg shadow-sm focus:border-violet-500 focus:ring-violet-500 placeholder:text-sm placeholder:opacity-80"
 									type="email"
 									name="email"

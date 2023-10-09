@@ -10,6 +10,7 @@ import Contact from "../Pages/Contact";
 import Team from "../Pages/Team";
 import Blog from "../Pages/Blog";
 import Profile from "../Pages/Profile";
+import FAQ from "../Pages/FAQ";
 
 // All router
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
 			{
 				path: "/team",
 				element: <Team></Team>,
+			},
+			{
+				path: "/faq",
+				element: <FAQ></FAQ>,
 			},
 			{
 				path: "/blog",

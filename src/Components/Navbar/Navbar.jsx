@@ -46,6 +46,14 @@ const Navbar = () => {
 					Contact
 				</NavLink>
 			</li>
+			<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
+				<NavLink
+					to="/faq"
+					className={({ isActive }) => (isActive ? " text-violet-500  " : "")}
+				>
+					FAQ
+				</NavLink>
+			</li>
 
 			{/* Links based on user present or not */}
 

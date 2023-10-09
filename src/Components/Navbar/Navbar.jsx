@@ -57,30 +57,22 @@ const Navbar = () => {
 
 			{/* Links based on user present or not */}
 
-			{user && (
-				<>
-					<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
-						<NavLink
-							to="/blog"
-							className={({ isActive }) =>
-								isActive ? " text-violet-500  " : ""
-							}
-						>
-							Blog
-						</NavLink>
-					</li>
-					<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
-						<NavLink
-							to="/profile"
-							className={({ isActive }) =>
-								isActive ? " text-violet-500  " : ""
-							}
-						>
-							Profile
-						</NavLink>
-					</li>
-				</>
-			)}
+			<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
+				<NavLink
+					to="/blog"
+					className={({ isActive }) => (isActive ? " text-violet-500  " : "")}
+				>
+					Blog
+				</NavLink>
+			</li>
+			<li className=" text-gray-700 hover:text-violet-500 duration-200 ease-in">
+				<NavLink
+					to="/profile"
+					className={({ isActive }) => (isActive ? " text-violet-500  " : "")}
+				>
+					Profile
+				</NavLink>
+			</li>
 		</>
 	);
 

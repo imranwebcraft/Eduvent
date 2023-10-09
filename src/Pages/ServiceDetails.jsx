@@ -6,7 +6,6 @@ import Footer from "../Components/Footer/Footer";
 const ServiceDetails = () => {
 	// put the find service in a state
 	const [service, setService] = useState(null);
-	console.log(service);
 
 	// use data from loader
 	const services = useLoaderData();

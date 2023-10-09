@@ -93,13 +93,13 @@ const ShowServiceDetails = ({ service }) => {
 						</div>
 						<p className=" text-center lg:text-left">
 							Please visit
-							<span className="mx-1 text-violet-500 hover:underline hover:cursor-pointer">
-								www.edu-vent.com
+							<span className="mx-1 text-violet-500 hover:text-violet-600 duration-300 ease-in hover:underline hover:cursor-pointer">
+								www.eduvent.com
 							</span>
 							or click
 							<Link
 								to={"/contact"}
-								className=" mx-1 text-violet-500 hover:underline hover:cursor-pointer"
+								className=" mx-1 text-violet-500 hover:text-violet-600 duration-300 ease-in hover:underline hover:cursor-pointer"
 							>
 								here
 							</Link>

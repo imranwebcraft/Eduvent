@@ -9,7 +9,6 @@ const PrivateRoute = ({ children }) => {
 
 	// Use location to get user desire path
 	const location = useLocation();
-	console.log(location);
 
 	// If loading true show the loader to prevent redirect the user to the login page
 	if (loading) {

@@ -2,7 +2,6 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import PropTypes from "prop-types";
 
 const TeamCard = ({ team }) => {
-	console.log(team);
 	// Destructure team JSON data
 	const { name, role, image, description } = team || {};
 
